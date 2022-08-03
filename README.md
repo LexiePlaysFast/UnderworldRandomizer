@@ -38,8 +38,8 @@ When playing, `dbur` displays the sequence of cards progressively, along some ha
 * Equipment requirements
   - Required weapon (11 variants): The player must immediately replace the weapon they have been using the longest (or, in the case of the first switch, their secondary weapon) with the required weapon
   - Forbidden weapon (11 variants): The player must immediately replace, if applicable, the forbidden weapon with another of their choice
-  - Required soul core (74 variants): The player must immediately equip the required soul core, replacing any (non-required) soul core
-  - Forbidden soul core (74 variants): The player must immediately replace, if applicable, the forbidden soul core with another of their (non-forbbiden) choice
+  - Required soul core (75 variants): The player must immediately equip the required soul core, replacing any (non-required) soul core
+  - Forbidden soul core (75 variants): The player must immediately replace, if applicable, the forbidden soul core with another of their (non-forbbiden) choice
   - Required guardian spirit (37 variants): The player must immediately replace the guardian spirit they have been using the longest (or, in the case of the first switch, their secondary guardian spirit) with the required guardian spirit
   - Forbidden guardian spirit (37 variants): The player must immediately replace, if applicable, the forbidden guardian spirit with another of their (non-forbidden) choice
 

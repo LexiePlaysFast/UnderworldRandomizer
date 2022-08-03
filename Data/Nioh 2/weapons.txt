@@ -1,0 +1,11 @@
+Sword,Tachi
+Dual Swords,
+Odachi,Nodachi
+Axe,Hammer
+Spear,Cross Spear
+Kusarigama,
+Tonfa,
+Hatchets,
+Switchglaive,
+Fists,Claws
+Splitstaff,

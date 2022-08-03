@@ -1,0 +1,75 @@
+Gaki,Brute,4
+Enki,Brute,5
+Yoki,Brute,7
+Gozuki,Brute,9
+Mezuki,Brute,9
+Ippon-Datara,Brute,7
+Kappa,Feral,4
+Nurikabe,Brute,8
+Mujina,Phantom,4
+Enenra,Phantom,9
+Nure-Onna,Feral,4
+Aberrant Soldier,Brute,4
+Toxic Slime,Phantom,5
+Yatsu-no-Kami,Phantom,10
+Yamanba,Feral,6
+One-Eyed Oni,Brute,7
+Karasu Tengu,Feral,9
+Waira,Phantom,8
+Karakasa Umbrella,Feral,4
+Lesser Umi-bozu,Phantom,5
+Skeleton Warrior,Phantom,6
+Kamaitachi,Feral,10
+Koroka,Phantom,7
+Dweller,Feral,5
+Rokurokubi,Phantom,6
+Onryoki,Brute,8
+Mitsume Yazura,Brute,7
+Biwa Boku-boku,Phantom,4
+Tatarimokke,Phantom,9
+Flying Bolt,Phantom,6
+Namahage,Brute,7
+Tesso,Feral,5
+Ubume,Phantom,4
+Onyudo,Brute,6
+Gyuki,Brute,10
+Wheelmonk,Feral,4
+Kasha,Feral,10
+Ryomen Sukuna,Brute,10
+Daidara Bocchi,Brute,10
+Shuten Doji,Brute,11
+Magatsu Warrior,Brute,9
+Lady Osakabe,Phantom,10
+Otakemaru,Phantom,11
+Kodama,Phantom,3
+Scampuss,Feral,2
+Infernal Oni-bi,Phantom,4
+Maelstrom Oni-bi,Phantom,4
+Thunderstorm Oni-bi,Phantom,4
+Uminyudo,Phantom,10
+Seto Taisho,Brute,5
+Bakegani,Brute,5
+Kiryoki,Feral,6
+Nue,Phantom,9
+Nuppeppo,Feral,5
+Infernal Fox Spirit,Phantom,4
+Maelstrom Fox Spirit,Phantom,4
+Thunderstorm Fox Spirit,Phantom,4
+Oboroguruma,Feral,6
+Yasha,Feral,7
+Tsuchigumo,Brute,8
+Giant Toad,Phantom,8
+Lightning Gods of Yomi,Phantom,9
+Hellish Hag,Feral,6
+White Tiger,Feral,8
+Underworld Soldier,Brute,6
+Konaki-Jiji,Brute,5
+Tate Eboshi,Feral,9
+Fuki,Feral,6
+Harinobo,Brute,5
+Itsumade,Phantom,7
+Kinki,Brute,6
+Ancient Nyotengu,Feral,8
+Ongyoki,Phantom,6
+Suiki,Phantom,6
+Nightmare Bringer,Brute,10

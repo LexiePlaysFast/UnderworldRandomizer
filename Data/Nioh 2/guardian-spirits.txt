@@ -1,0 +1,37 @@
+Makami,Fire,Brute,20
+Ame-no-Mitori,Lightning,Feral,21
+Kagewani,Water,Phantom,24
+Okuri-Inu,Fire,Brute,22
+Masaru,Fire,Feral,23
+Shirohami,Water,Brute,21
+Hyobishin,Fire,Brute,24
+Nekomata,Lightning,Feral,22
+Yaonami-Hime,Water,Feral,23
+Rokugezo,Lightning,Phantom,23
+Usura-Hicho,Water,Phantom,20
+Shin-Roku,Lightning,Brute,24
+Hiyokucho,Water,Feral,22
+Tengen Kujaku,Fire,Phantom,24
+Nine Tails,Fire,Phantom,23
+Atlas Bear,Lightning,Brute,20
+Genbu,Water,Phantom,24
+Gyokuto,Lightning,Feral,20
+Saoirse,Water,Phantom,20
+Yumehami,Lightning,Phantom,21
+Isanagami,Water,Brute,24
+Hakutaku,Lightning,Phantom,23
+Inosasao,Fire,Brute,21
+Yatagarasu,Fire,Feral,22
+Itokuri,Water,Feral,22
+Mizuchi,Water,Brute,20
+Blue Dragon,Lightning,Phantom,24
+Suzaku,Fire,Phantom,24
+Kurama Tengu,Purity,Feral,22
+Sohaya,Purity,Feral,26
+Amiabe,Purity,Phantom,23
+Ho,Purity,Brute,25
+Oh,Purity,Feral,25
+Ho-oh,Purity,Phantom,26
+Janomecho,Corruption,Feral,22
+Kuzunoha the Fox,Corruption,Phantom,24
+Baku,Corruption,Brute,26

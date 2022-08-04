@@ -1,6 +1,6 @@
-Sword,Tachi
+Uchigatana,Tachi
 Dual Swords,
-Odachi,Nodachi
+Odachi,
 Axe,Hammer
 Spear,Cross Spear
 Kusarigama,

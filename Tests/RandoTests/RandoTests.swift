@@ -1,5 +1,5 @@
 import XCTest
-import LibRando
+@testable import LibRando
 
 final class RandoTests: XCTestCase {
 

@@ -31,7 +31,7 @@ enum Nioh: Game {
   static let name: String = "Nioh"
 
   static let weapons:         [Weapon]!         = loadFile("Weapons")
-  static let guardianSpirits: [GuardianSpirit]! = loadFile("GuardianSpirits")
+  static let guardianSpirits: [GuardianSpirit]! = loadFile("Guardian Spirits")
 
 }
 
@@ -39,8 +39,8 @@ enum Nioh2: Game {
 
   static let name: String = "Nioh 2"
 
-  static let soulCores:       [SoulCore]!       = loadFile("SoulCores")
-  static let guardianSpirits: [GuardianSpirit]! = loadFile("GuardianSpirits")
+  static let soulCores:       [SoulCore]!       = loadFile("Soul Cores")
+  static let guardianSpirits: [GuardianSpirit]! = loadFile("Guardian Spirits")
   static let weapons:         [Weapon]!         = loadFile("Weapons")
 
 }

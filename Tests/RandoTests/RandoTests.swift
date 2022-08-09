@@ -9,6 +9,7 @@ final class RandoTests: XCTestCase {
 
   func testData() {
     XCTAssertEqual(Nioh.weapons.count, 7)
+    XCTAssertEqual(Nioh.guardianSpirits.count, 29)
 
     XCTAssertEqual(Nioh2.soulCores.count, 75)
     XCTAssertEqual(Nioh2.guardianSpirits.count, 37)

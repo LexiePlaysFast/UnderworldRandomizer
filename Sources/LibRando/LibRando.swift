@@ -30,7 +30,8 @@ enum Nioh: Game {
 
   static let name: String = "Nioh"
 
-  static let weapons: [Weapon]! = loadFile("Weapons")
+  static let weapons:         [Weapon]!         = loadFile("Weapons")
+  static let guardianSpirits: [GuardianSpirit]! = loadFile("GuardianSpirits")
 
 }
 

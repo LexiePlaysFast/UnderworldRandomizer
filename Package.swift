@@ -17,6 +17,10 @@ let package = Package(
     .target(
       name: "LibRando",
       dependencies: [
+      ],
+      resources: [
+        .copy("Resources/Nioh"),
+        .copy("Resources/Nioh 2/"),
       ]
     ),
     .testTarget(

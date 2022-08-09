@@ -7,4 +7,12 @@ final class RandoTests: XCTestCase {
     XCTAssertEqual(LibRando.version, "0.0.1")
   }
 
+  func testData() {
+    XCTAssertEqual(Nioh.weapons.count, 7)
+
+    XCTAssertEqual(Nioh2.soulCores.count, 75)
+    XCTAssertEqual(Nioh2.guardianSpirits.count, 37)
+    XCTAssertEqual(Nioh2.weapons.count, 11)
+  }
+
 }

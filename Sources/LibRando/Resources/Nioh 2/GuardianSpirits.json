@@ -1,0 +1,186 @@
+[ {
+  "name": "Makami",
+  "element": "fire",
+  "type": "brute",
+  "attunementLimit": 20
+}, {
+  "name": "Ame-no-Mitori",
+  "element": "lightning",
+  "type": "feral",
+  "attunementLimit": 21
+}, {
+  "name": "Kagewani",
+  "element": "water",
+  "type": "phantom",
+  "attunementLimit": 24
+}, {
+  "name": "Okuri-Inu",
+  "element": "fire",
+  "type": "brute",
+  "attunementLimit": 22
+}, {
+  "name": "Masaru",
+  "element": "fire",
+  "type": "feral",
+  "attunementLimit": 23
+}, {
+  "name": "Shirohami",
+  "element": "water",
+  "type": "brute",
+  "attunementLimit": 21
+}, {
+  "name": "Hyobishin",
+  "element": "fire",
+  "type": "brute",
+  "attunementLimit": 24
+}, {
+  "name": "Nekomata",
+  "element": "lightning",
+  "type": "feral",
+  "attunementLimit": 22
+}, {
+  "name": "Yaonami-Hime",
+  "element": "water",
+  "type": "feral",
+  "attunementLimit": 23
+}, {
+  "name": "Rokugezo",
+  "element": "lightning",
+  "type": "phantom",
+  "attunementLimit": 23
+}, {
+  "name": "Usura-Hicho",
+  "element": "water",
+  "type": "phantom",
+  "attunementLimit": 20
+}, {
+  "name": "Shin-Roku",
+  "element": "lightning",
+  "type": "brute",
+  "attunementLimit": 24
+}, {
+  "name": "Hiyokucho",
+  "element": "water",
+  "type": "feral",
+  "attunementLimit": 22
+}, {
+  "name": "Tengen Kujaku",
+  "element": "fire",
+  "type": "phantom",
+  "attunementLimit": 24
+}, {
+  "name": "Nine Tails",
+  "element": "fire",
+  "type": "phantom",
+  "attunementLimit": 23
+}, {
+  "name": "Atlas Bear",
+  "element": "lightning",
+  "type": "brute",
+  "attunementLimit": 20
+}, {
+  "name": "Genbu",
+  "element": "water",
+  "type": "phantom",
+  "attunementLimit": 24
+}, {
+  "name": "Gyokuto",
+  "element": "lightning",
+  "type": "feral",
+  "attunementLimit": 20
+}, {
+  "name": "Saoirse",
+  "element": "water",
+  "type": "phantom",
+  "attunementLimit": 20
+}, {
+  "name": "Yumehami",
+  "element": "lightning",
+  "type": "phantom",
+  "attunementLimit": 21
+}, {
+  "name": "Isanagami",
+  "element": "water",
+  "type": "brute",
+  "attunementLimit": 24
+}, {
+  "name": "Hakutaku",
+  "element": "lightning",
+  "type": "phantom",
+  "attunementLimit": 23
+}, {
+  "name": "Inosasao",
+  "element": "fire",
+  "type": "brute",
+  "attunementLimit": 21
+}, {
+  "name": "Yatagarasu",
+  "element": "fire",
+  "type": "feral",
+  "attunementLimit": 22
+}, {
+  "name": "Itokuri",
+  "element": "water",
+  "type": "feral",
+  "attunementLimit": 22
+}, {
+  "name": "Mizuchi",
+  "element": "water",
+  "type": "brute",
+  "attunementLimit": 20
+}, {
+  "name": "Blue Dragon",
+  "element": "lightning",
+  "type": "phantom",
+  "attunementLimit": 24
+}, {
+  "name": "Suzaku",
+  "element": "fire",
+  "type": "phantom",
+  "attunementLimit": 24
+}, {
+  "name": "Kurama Tengu",
+  "element": "purity",
+  "type": "feral",
+  "attunementLimit": 22
+}, {
+  "name": "Sohaya",
+  "element": "purity",
+  "type": "feral",
+  "attunementLimit": 26
+}, {
+  "name": "Amiabe",
+  "element": "purity",
+  "type": "phantom",
+  "attunementLimit": 23
+}, {
+  "name": "Ho",
+  "element": "purity",
+  "type": "brute",
+  "attunementLimit": 25
+}, {
+  "name": "Oh",
+  "element": "purity",
+  "type": "feral",
+  "attunementLimit": 25
+}, {
+  "name": "Ho-oh",
+  "element": "purity",
+  "type": "phantom",
+  "attunementLimit": 26
+}, {
+  "name": "Janomecho",
+  "element": "corruption",
+  "type": "feral",
+  "attunementLimit": 22
+}, {
+  "name": "Kuzunoha the Fox",
+  "element": "corruption",
+  "type": "phantom",
+  "attunementLimit": 24
+}, {
+  "name": "Baku",
+  "element": "corruption",
+  "type": "brute",
+  "attunementLimit": 26
+} ]

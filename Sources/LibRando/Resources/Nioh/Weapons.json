@@ -1,0 +1,27 @@
+[ {
+  "type": "Sword",
+  "variants": [
+    "Uchigatana",
+    "Tachi"
+  ]
+}, {
+  "type": "Dual Swords"
+}, {
+  "type": "Odachi"
+}, {
+  "type": "Axe",
+  "variants": [
+    "Axe",
+    "Hammer"
+  ]
+}, {
+  "type": "Spear",
+  "variants": [
+    "Spear",
+    "Cross Spear"
+  ]
+}, {
+  "type": "Kusarigama"
+}, {
+  "type": "Tonfa"
+} ]

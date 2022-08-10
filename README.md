@@ -43,6 +43,6 @@ When playing, `dbur` displays the sequence of cards progressively, along some ha
   - Required guardian spirit (37 variants): The player must immediately replace the guardian spirit they have been using the longest (or, in the case of the first switch, their secondary guardian spirit) with the required guardian spirit
   - Forbidden guardian spirit (37 variants): The player must immediately replace, if applicable, the forbidden guardian spirit with another of their (non-forbidden) choice
 
-## Deck Autovetter
+## Randomizer Logic
 
-The randomizer will, as part of drawing cards, make sure that the run works. The simple autovetter does things like checking that the drawn deck doesn't require _e.g._ the player to trade with a sudama on a floor that doesn't have one. If given the player's starting gear (weapons, soul cores, guardian spirits) the randomizer can additionally make sure that none of the draws are wasted, by prohibiting things like forbidding equipment the player is not guaranteed to have.
+The randomizer will, as part of drawing cards, make sure that the run works. The basic logic does things like checking that the drawn deck doesn't require _e.g._ the player to trade with a sudama on a floor that doesn't have one. If given the player's starting gear (weapons, soul cores, guardian spirits) and with enhanced logic enabled, the randomizer can additionally make sure that none of the draws are wasted, by prohibiting things like forbidding equipment the player is not guaranteed to have.

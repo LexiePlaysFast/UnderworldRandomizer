@@ -16,7 +16,7 @@ final class RandoTests: XCTestCase {
     XCTAssertEqual(Nioh2.weapons.count, 11)
 
     XCTAssertEqual(Nioh2.bosses.count, 45)
-    XCTAssertEqual(Nioh2.floorLayouts.count, 33)
+    XCTAssertEqual(Nioh2.floorLayouts.count, 36)
 
     XCTAssertEqual(Nioh2.underworldFloors.count, 108)
 

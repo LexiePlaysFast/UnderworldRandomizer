@@ -17,6 +17,16 @@ final class RandoTests: XCTestCase {
 
     XCTAssertEqual(Nioh2.bosses.count, 45)
     XCTAssertEqual(Nioh2.floorLayouts.count, 33)
+
+    XCTAssertEqual(Nioh2.underworldFloors.count, 108)
+
+    XCTAssertEqual(Nioh2.underworldFloors.first?.floorNumber, 1)
+    XCTAssertEqual(Nioh2.underworldFloors.first?.boss.name, "Mezuki")
+    XCTAssertEqual(Nioh2.underworldFloors.first?.floorLayout.name, "Kurama")
+
+    XCTAssertEqual(Nioh2.underworldFloors.last?.floorNumber, 108)
+    XCTAssertEqual(Nioh2.underworldFloors.last?.boss.name, "Nightmare Bringer")
+    XCTAssertEqual(Nioh2.underworldFloors.last?.floorLayout.name, "Daigo Temple")
   }
 
 }

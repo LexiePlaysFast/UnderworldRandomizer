@@ -26,6 +26,8 @@ public protocol Game {
 
   static var name: String { get }
 
+  static var randomizers: [String: Randomizer] { get }
+
 }
 
 extension Game {
@@ -40,6 +42,8 @@ enum Nioh: Game {
 
   static let name: String = "Nioh"
 
+  static let randomizers: [String: Randomizer] = [:]
+
   static let weapons:         [Weapon]         = loadFile("Weapons")!
   static let guardianSpirits: [GuardianSpirit] = loadFile("Guardian Spirits")!
 
@@ -48,6 +52,10 @@ enum Nioh: Game {
 enum Nioh2: Game {
 
   static let name: String = "Nioh 2"
+
+  static let randomizers: [String: Randomizer] = [
+    "Depths Randomizer": DepthsRandomizer()
+  ]
 
   static let soulCores:        [SoulCore]        = loadFile("Soul Cores")!
   static let guardianSpirits:  [GuardianSpirit]  = loadFile("Guardian Spirits")!

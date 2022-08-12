@@ -25,4 +25,25 @@ final class RandoTests: XCTestCase {
     XCTAssertEqual(Nioh2.underworldFloors.last?.floorLayout.name, "Daigo Temple")
   }
 
+  func testWeaponEffectCard() {
+    let effectCard1 = WeaponCard(weapon: Nioh2.weapons.first!, tone: .required)
+    let effectCard2 = WeaponCard(weapon: Nioh2.weapons.last!, tone: .prohibited)
+
+    XCTAssertEqual(effectCard1.description, "Weapon required: Sword")
+    XCTAssertEqual(effectCard2.description, "Weapon prohibited: Splitstaff")
+  }
+
+  func testDepthsRandomizer() {
+    let randomizer = Nioh2.DepthsRandomizer()
+    let deck = randomizer.randomize()
+
+    deck.floors
+      .map { $0.description }
+      .forEach { print($0) }
+
+    deck.spareCards!
+      .map { $0.description }
+      .forEach { print($0) }
+  }
+
 }

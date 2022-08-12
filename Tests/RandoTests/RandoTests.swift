@@ -3,10 +3,6 @@ import XCTest
 
 final class RandoTests: XCTestCase {
 
-  func testLibRandoVersion() {
-    XCTAssertEqual(LibRando.version, "0.0.1")
-  }
-
   func testData() {
     XCTAssertEqual(Nioh.weapons.count, 7)
     XCTAssertEqual(Nioh.guardianSpirits.count, 29)

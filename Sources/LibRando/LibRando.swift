@@ -1,5 +1,15 @@
 public enum LibRando {
   public static let version = "0.0.1"
+
+  fileprivate static let games: [String: Game.Type] = [
+    Nioh.name: Nioh.self,
+    Nioh2.name: Nioh2.self,
+  ]
+
+  public static func game(named name: String) -> Game.Type? {
+    games[name]
+  }
+
 }
 
 import Foundation
@@ -12,7 +22,7 @@ fileprivate func loadJSONFile<T>(_ resource: String, from game: String) -> [T]? 
     .map { try decoder.decode([T].self, from: $0) }
 }
 
-protocol Game {
+public protocol Game {
 
   static var name: String { get }
 

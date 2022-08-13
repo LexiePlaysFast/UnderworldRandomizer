@@ -95,8 +95,26 @@ extension Nioh2 {
           return false
         }
 
-        if logicLevel == .basic {
+        guard
+          logicLevel == .enhanced
+        else {
           return true
+        }
+
+        let guardianSpiritTypes = (guardianSpirits.0.guardianSpirit.type, guardianSpirits.1.guardianSpirit.type)
+
+        let differentGuardianSpiritTypes = guardianSpiritTypes.0 != guardianSpiritTypes.1
+        let oneBruteGuardianSpirit = guardianSpiritTypes.0 == .brute || guardianSpiritTypes.1 == .brute
+        let soulCoresMatchGuardianSpirit =
+          flatSoulCoresOne.allSatisfy { $0.type == guardianSpiritTypes.0 } &&
+          flatSoulCoresTwo.allSatisfy { $0.type == guardianSpiritTypes.1 }
+
+        guard
+          differentGuardianSpiritTypes,
+          oneBruteGuardianSpirit,
+          soulCoresMatchGuardianSpirit
+        else {
+          return false
         }
 
         return true
@@ -137,11 +155,65 @@ extension Nioh2 {
           )
       }
 
-      return RandomizedFloors(floors: floors, spareCards: weapons)
+      return RandomizedFloors(floors: floors, spareCards: weapons + guardianSpirits + soulCores)
     }
 
     func enhancedCreateFloors() -> RandomizedFloors {
-      RandomizedFloors(floors: [])
+      var weapons = weaponCards.shuffled()
+
+      let guardianSpirits = guardianSpiritCards.shuffled()
+      var bruteGuardianSpirits = guardianSpirits.filter {
+        $0.guardianSpirit.type == .brute
+      }
+      var nonBruteGuardianSpirits = guardianSpirits.filter {
+        $0.guardianSpirit.type != .brute
+      }
+
+      let soulCores = soulCoreCards.shuffled()
+      var bruteSoulCores = soulCores.filter {
+        $0.soulCore.type == .brute
+      }
+      var feralSoulCores = soulCores.filter {
+        $0.soulCore.type == .feral
+      }
+      var phantomSoulCores = soulCores.filter {
+        $0.soulCore.type == .phantom
+      }
+
+      var floors: [FloorEffect] = []
+
+      for floorNumber in 1...5 {
+        let weapons = (weapons.removeFirst(), weapons.removeFirst())
+        let guardianSpirits = (bruteGuardianSpirits.removeFirst(), nonBruteGuardianSpirits.removeFirst())
+
+        let soulCoresOne = (bruteSoulCores.removeFirst(), bruteSoulCores.removeFirst(), bruteSoulCores.removeFirst())
+        let soulCoresTwo = guardianSpirits.1.guardianSpirit.type == .feral
+          ? (feralSoulCores.removeFirst(),   feralSoulCores.removeFirst(),   feralSoulCores.removeFirst()  )
+          : (phantomSoulCores.removeFirst(), phantomSoulCores.removeFirst(), phantomSoulCores.removeFirst())
+
+        floors.append(
+          DepthsFloorEffect(
+            floorNumber: floorNumber,
+            weapons: weapons,
+            guardianSpirits: guardianSpirits,
+            soulCores: (soulCoresOne, soulCoresTwo)
+          )
+        )
+      }
+
+      let spareCards: [EffectCard] = [
+        weapons,
+        bruteGuardianSpirits,
+        nonBruteGuardianSpirits,
+        bruteSoulCores,
+        feralSoulCores,
+        phantomSoulCores,
+      ].flatMap { $0 as! [EffectCard] }
+
+      return RandomizedFloors(
+        floors: floors,
+        spareCards: spareCards
+      )
     }
 
     func createFloors(logicLevel: LogicLevel) -> RandomizedFloors {
@@ -159,8 +231,6 @@ extension Nioh2 {
 
         if (floors.validate()) {
           return floors
-        } else {
-          print("Discarded invalid draw")
         }
       }
     }

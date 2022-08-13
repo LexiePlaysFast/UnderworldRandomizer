@@ -33,17 +33,18 @@ final class RandoTests: XCTestCase {
     XCTAssertEqual(effectCard2.description, "Weapon prohibited: Splitstaff")
   }
 
-  func testDepthsRandomizer() {
+  func testBasicDepthsRandomizer() {
     let randomizer = Nioh2.DepthsRandomizer()
     let deck = randomizer.randomize(logicLevel: .basic)
 
-    deck.floors
-      .map { $0.description }
-      .forEach { print($0) }
+    XCTAssertTrue(deck.validate(logicLevel: .basic))
+  }
 
-    deck.spareCards!
-      .map { $0.description }
-      .forEach { print($0) }
+  func testEnhancedDepthsRandomizer() {
+    let randomizer = Nioh2.DepthsRandomizer()
+    let deck = randomizer.randomize(logicLevel: .enhanced)
+
+    XCTAssertTrue(deck.validate(logicLevel: .enhanced))
   }
 
 }

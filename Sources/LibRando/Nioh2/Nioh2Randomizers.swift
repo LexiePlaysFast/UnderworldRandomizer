@@ -16,6 +16,72 @@ extension Nioh2 {
       }
     }
 
+    struct SoulCoreSelection {
+      let guardianSpirit: GuardianSpirit
+      let soulCores: [SoulCore]
+
+      init(guardianSpirit: GuardianSpirit, soulCores: SoulCore...) {
+        self.guardianSpirit = guardianSpirit
+        self.soulCores = soulCores
+
+        precondition(soulCores.count == 3, "Incorrect number of soul cores, expected 3")
+      }
+
+      var totalCost: Int {
+        soulCores
+          .map { $0.attunementCost }
+          .reduce(0, +)
+      }
+
+      var sufficientCapacity: Bool {
+        guardianSpirit.attunementLimit >= totalCost
+      }
+
+      var soulCoresMatchSpirit: Bool {
+        soulCores
+          .allSatisfy { $0.type == guardianSpirit.type }
+      }
+    }
+
+    struct GuardianSpiritPair {
+      let primary: SoulCoreSelection
+      let secondary: SoulCoreSelection
+
+      var areDifferent: Bool {
+        primary.guardianSpirit != secondary.guardianSpirit
+      }
+
+      var areDifferentTypes: Bool {
+        primary.guardianSpirit.type != secondary.guardianSpirit.type
+      }
+
+      var areDifferentElements: Bool {
+        primary.guardianSpirit.element != secondary.guardianSpirit.element
+      }
+
+      var allSoulCores: [SoulCore] {
+        primary.soulCores + secondary.soulCores
+      }
+
+      var guardianSpiritCards: [EffectCard] {
+        [ primary.guardianSpirit, secondary.guardianSpirit ]
+          .map { GuardianSpiritCard(guardianSpirit: $0, tone: .required) }
+      }
+
+      var soulCoreCards: [EffectCard] {
+        allSoulCores
+          .map { SoulCoreCard(soulCore: $0, tone: .required) }
+      }
+
+      var haveDifferentSoulCores: Bool {
+        Set(allSoulCores.map { $0.name }).count == 6
+      }
+
+      var cards: [EffectCard] {
+        guardianSpiritCards + soulCoreCards
+      }
+    }
+
     struct DepthsFloorEffect: FloorEffect {
 
       var description: String {

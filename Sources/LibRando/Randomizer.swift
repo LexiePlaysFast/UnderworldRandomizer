@@ -31,8 +31,7 @@ public struct RandomizedFloors {
 
   func validate(logicLevel: LogicLevel = .basic) -> Bool {
     floors
-      .map { $0.validate(logicLevel: logicLevel) }
-      .allSatisfy { $0 }
+      .allSatisfy { $0.validate(logicLevel: logicLevel) }
   }
 
 }

@@ -9,10 +9,6 @@ extension Nioh2 {
     }
   }
 
-}
-
-extension Nioh2 {
-
   struct SoulCoreCard: EffectCard {
     let soulCore: SoulCore
     let tone: EffectCardTone

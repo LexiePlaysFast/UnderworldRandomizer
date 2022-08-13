@@ -106,17 +106,17 @@ extension Nioh2 {
             guardianSpirits.secondary.guardianSpirit.name
           )
           Required soul cores:       \(
-            "Foo"
+            guardianSpirits.primary.soulCores[0].name
           ), \(
-            "Bar"
+            guardianSpirits.primary.soulCores[1].name
           ) & \(
-            "Baz"
+            guardianSpirits.primary.soulCores[2].name
           ); \(
-            "Foo"
+            guardianSpirits.secondary.soulCores[0].name
           ), \(
-            "Bar"
+            guardianSpirits.secondary.soulCores[1].name
           ) & \(
-            "Baz"
+            guardianSpirits.secondary.soulCores[2].name
           )
         """
       }

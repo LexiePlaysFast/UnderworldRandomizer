@@ -1,6 +1,6 @@
 public protocol Randomizer {
 
-  func randomize() -> RandomizedFloors
+  func randomize(logicLevel: LogicLevel) -> RandomizedFloors
 
 }
 

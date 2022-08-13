@@ -95,6 +95,10 @@ extension Nioh2 {
           return false
         }
 
+        if logicLevel == .basic {
+          return true
+        }
+
         return true
       }
     }
@@ -111,7 +115,7 @@ extension Nioh2 {
       SoulCoreCard(soulCore: $0, tone: .required)
     }
 
-    func createFloors() -> RandomizedFloors {
+    func basicCreateFloors() -> RandomizedFloors {
       var weapons = weaponCards.shuffled()
       var guardianSpirits = guardianSpiritCards.shuffled()
       var soulCores = soulCoreCards.shuffled()
@@ -136,9 +140,22 @@ extension Nioh2 {
       return RandomizedFloors(floors: floors, spareCards: weapons)
     }
 
-    func randomize() -> RandomizedFloors {
+    func enhancedCreateFloors() -> RandomizedFloors {
+      RandomizedFloors(floors: [])
+    }
+
+    func createFloors(logicLevel: LogicLevel) -> RandomizedFloors {
+      switch logicLevel {
+      case .basic:
+        return basicCreateFloors()
+      case .enhanced:
+        return enhancedCreateFloors()
+      }
+    }
+
+    func randomize(logicLevel: LogicLevel) -> RandomizedFloors {
       while true {
-        let floors = createFloors()
+        let floors = createFloors(logicLevel: logicLevel)
 
         if (floors.validate()) {
           return floors

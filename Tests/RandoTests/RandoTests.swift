@@ -35,7 +35,7 @@ final class RandoTests: XCTestCase {
 
   func testDepthsRandomizer() {
     let randomizer = Nioh2.DepthsRandomizer()
-    let deck = randomizer.randomize()
+    let deck = randomizer.randomize(logicLevel: .basic)
 
     deck.floors
       .map { $0.description }

@@ -33,7 +33,7 @@ extension Nioh2 {
           .reduce(0, +)
       }
 
-      var sufficientCapacity: Bool {
+      var withinLimit: Bool {
         guardianSpirit.attunementLimit >= totalCost
       }
 
@@ -77,8 +77,20 @@ extension Nioh2 {
         Set(allSoulCores.map { $0.name }).count == 6
       }
 
+      var withinLimit: Bool {
+        primary.withinLimit && secondary.withinLimit
+      }
+
+      var soulCoresMatchSpirit: Bool {
+        primary.soulCoresMatchSpirit && secondary.soulCoresMatchSpirit
+      }
+
       var cards: [EffectCard] {
         guardianSpiritCards + soulCoreCards
+      }
+
+      func oneIs(type: SpiritType) -> Bool {
+        primary.guardianSpirit.type == type || secondary.guardianSpirit.type == type
       }
     }
 
@@ -89,22 +101,22 @@ extension Nioh2 {
         On floor \(floorNumber) of the Depths, the following modifiers are in effect:
           Required weapons:          \(weapons.primary.name) & \(weapons.secondary.name)
           Required guardian spirits: \(
-            guardianSpirits.0.guardianSpirit.name
+            guardianSpirits.primary.guardianSpirit.name
           ) & \(
-            guardianSpirits.1.guardianSpirit.name
+            guardianSpirits.secondary.guardianSpirit.name
           )
           Required soul cores:       \(
-            soulCores.0.0.soulCore.name
+            "Foo"
           ), \(
-            soulCores.0.1.soulCore.name
+            "Bar"
           ) & \(
-            soulCores.0.2.soulCore.name
+            "Baz"
           ); \(
-            soulCores.1.0.soulCore.name
+            "Foo"
           ), \(
-            soulCores.1.1.soulCore.name
+            "Bar"
           ) & \(
-            soulCores.1.2.soulCore.name
+            "Baz"
           )
         """
       }
@@ -114,22 +126,10 @@ extension Nioh2 {
       let floorNumber: Int
 
       let weapons: WeaponPair
-      let guardianSpirits: (GuardianSpiritCard, GuardianSpiritCard)
-      let soulCores: ((SoulCoreCard, SoulCoreCard, SoulCoreCard), (SoulCoreCard, SoulCoreCard, SoulCoreCard))
+      let guardianSpirits: GuardianSpiritPair
 
       var cards: [EffectCard] {
-        [
-          WeaponCard(weapon: weapons.primary, tone: .required),
-          WeaponCard(weapon: weapons.secondary, tone: .required),
-          guardianSpirits.0,
-          guardianSpirits.1,
-          soulCores.0.0,
-          soulCores.0.1,
-          soulCores.0.2,
-          soulCores.1.0,
-          soulCores.1.1,
-          soulCores.1.2,
-        ]
+        weapons.cards + guardianSpirits.cards
       }
 
       func validate(logicLevel: LogicLevel) -> Bool {
@@ -139,42 +139,16 @@ extension Nioh2 {
           return false
         }
 
-        let flatSoulCoresOne = [
-          soulCores.0.0,
-          soulCores.0.1,
-          soulCores.0.2,
-        ].map { $0.soulCore }
-
-        let flatSoulCoresTwo = [
-          soulCores.1.0,
-          soulCores.1.1,
-          soulCores.1.2,
-        ].map { $0.soulCore }
-
-        let flatSoulCores = flatSoulCoresOne + flatSoulCoresTwo
-
-        let differentWeapons = weapons.areDifferent
-        let differentGuardianSpirits = guardianSpirits.0.guardianSpirit != guardianSpirits.1.guardianSpirit
-        let soulCoresUnique = Set(flatSoulCores.map { $0.name }).count == 6
-
         guard
-          differentWeapons,
-          differentGuardianSpirits,
-          soulCoresUnique
+          weapons.areDifferent,
+          guardianSpirits.areDifferent,
+          guardianSpirits.haveDifferentSoulCores
         else {
           return false
         }
 
-        let soulCoreCostOne: Int = flatSoulCoresOne
-          .map { $0.attunementCost }
-          .reduce(0, +)
-        let soulCoreCostTwo: Int = flatSoulCoresTwo
-          .map { $0.attunementCost }
-          .reduce(0, +)
-
         guard
-          guardianSpirits.0.guardianSpirit.attunementLimit >= soulCoreCostOne,
-          guardianSpirits.1.guardianSpirit.attunementLimit >= soulCoreCostTwo
+          guardianSpirits.withinLimit
         else {
           return false
         }
@@ -185,18 +159,10 @@ extension Nioh2 {
           return true
         }
 
-        let guardianSpiritTypes = (guardianSpirits.0.guardianSpirit.type, guardianSpirits.1.guardianSpirit.type)
-
-        let differentGuardianSpiritTypes = guardianSpiritTypes.0 != guardianSpiritTypes.1
-        let oneBruteGuardianSpirit = guardianSpiritTypes.0 == .brute || guardianSpiritTypes.1 == .brute
-        let soulCoresMatchGuardianSpirit =
-          flatSoulCoresOne.allSatisfy { $0.type == guardianSpiritTypes.0 } &&
-          flatSoulCoresTwo.allSatisfy { $0.type == guardianSpiritTypes.1 }
-
         guard
-          differentGuardianSpiritTypes,
-          oneBruteGuardianSpirit,
-          soulCoresMatchGuardianSpirit
+          guardianSpirits.areDifferentTypes,
+          guardianSpirits.soulCoresMatchSpirit,
+          guardianSpirits.oneIs(type: .brute)
         else {
           return false
         }
@@ -205,18 +171,10 @@ extension Nioh2 {
       }
     }
 
-    let guardianSpiritCards: [GuardianSpiritCard] = guardianSpirits.map {
-      GuardianSpiritCard(guardianSpirit: $0, tone: .required)
-    }
-
-    let soulCoreCards: [SoulCoreCard] = soulCores.map {
-      SoulCoreCard(soulCore: $0, tone: .required)
-    }
-
     func basicCreateFloors() -> RandomizedFloors {
       var weapons = weapons.shuffled()
-      var guardianSpirits = guardianSpiritCards.shuffled()
-      var soulCores = soulCoreCards.shuffled()
+      var guardianSpirits = guardianSpirits.shuffled()
+      var soulCores = soulCores.shuffled()
 
       var floors: [FloorEffect] = []
 
@@ -227,20 +185,30 @@ extension Nioh2 {
               logicLevel: .basic,
               floorNumber: floorNumber,
               weapons: WeaponPair(primary: weapons.removeFirst(), secondary: weapons.removeFirst()),
-              guardianSpirits: (guardianSpirits.removeFirst(), guardianSpirits.removeFirst()),
-              soulCores: (
-                (soulCores.removeFirst(), soulCores.removeFirst(), soulCores.removeFirst()),
-                (soulCores.removeFirst(), soulCores.removeFirst(), soulCores.removeFirst())
+              guardianSpirits: GuardianSpiritPair(
+                primary: SoulCoreSelection(
+                  guardianSpirit: guardianSpirits.removeFirst(),
+                  soulCores: soulCores.removeFirst(), soulCores.removeFirst(), soulCores.removeFirst()
+                ),
+                secondary: SoulCoreSelection(
+                  guardianSpirit: guardianSpirits.removeFirst(),
+                  soulCores: soulCores.removeFirst(), soulCores.removeFirst(), soulCores.removeFirst()
+                )
               )
             )
           )
       }
 
-      let spareCards: [EffectCard] = [
-        weapons.map { WeaponCard(weapon: $0, tone: .required) },
-        guardianSpirits,
-        soulCores,
-      ].flatMap { $0 as! [EffectCard] }
+      let spareCards: [EffectCard] =
+        weapons.map {
+          WeaponCard(weapon: $0, tone: .required)
+        } +
+        guardianSpirits.map {
+          GuardianSpiritCard(guardianSpirit: $0, tone: .required)
+        } +
+        soulCores.map {
+          SoulCoreCard(soulCore: $0, tone: .required)
+        }
 
       return RandomizedFloors(floors: floors, spareCards: spareCards)
     }
@@ -248,23 +216,23 @@ extension Nioh2 {
     func enhancedCreateFloors() -> RandomizedFloors {
       var weapons = weapons.shuffled()
 
-      let guardianSpirits = guardianSpiritCards.shuffled()
+      let guardianSpirits = guardianSpirits.shuffled()
       var bruteGuardianSpirits = guardianSpirits.filter {
-        $0.guardianSpirit.type == .brute
+        $0.type == .brute
       }
       var nonBruteGuardianSpirits = guardianSpirits.filter {
-        $0.guardianSpirit.type != .brute
+        $0.type != .brute
       }
 
-      let soulCores = soulCoreCards.shuffled()
+      let soulCores = soulCores.shuffled()
       var bruteSoulCores = soulCores.filter {
-        $0.soulCore.type == .brute
+        $0.type == .brute
       }
       var feralSoulCores = soulCores.filter {
-        $0.soulCore.type == .feral
+        $0.type == .feral
       }
       var phantomSoulCores = soulCores.filter {
-        $0.soulCore.type == .phantom
+        $0.type == .phantom
       }
 
       var floors: [FloorEffect] = []
@@ -274,7 +242,7 @@ extension Nioh2 {
         let guardianSpirits = (bruteGuardianSpirits.removeFirst(), nonBruteGuardianSpirits.removeFirst())
 
         let soulCoresOne = (bruteSoulCores.removeFirst(), bruteSoulCores.removeFirst(), bruteSoulCores.removeFirst())
-        let soulCoresTwo = guardianSpirits.1.guardianSpirit.type == .feral
+        let soulCoresTwo = guardianSpirits.1.type == .feral
           ? (feralSoulCores.removeFirst(),   feralSoulCores.removeFirst(),   feralSoulCores.removeFirst()  )
           : (phantomSoulCores.removeFirst(), phantomSoulCores.removeFirst(), phantomSoulCores.removeFirst())
 
@@ -283,20 +251,30 @@ extension Nioh2 {
             logicLevel: .enhanced,
             floorNumber: floorNumber,
             weapons: weapons,
-            guardianSpirits: guardianSpirits,
-            soulCores: (soulCoresOne, soulCoresTwo)
+            guardianSpirits: GuardianSpiritPair(
+              primary: SoulCoreSelection(
+                guardianSpirit: guardianSpirits.0,
+                soulCores: soulCoresOne.0, soulCoresOne.1, soulCoresOne.2
+              ),
+              secondary: SoulCoreSelection(
+                guardianSpirit: guardianSpirits.1,
+                soulCores: soulCoresTwo.0, soulCoresTwo.1, soulCoresTwo.2
+              )
+            )
           )
         )
       }
 
-      let spareCards: [EffectCard] = [
-        weapons.map { WeaponCard(weapon: $0, tone: .required) },
-        bruteGuardianSpirits,
-        nonBruteGuardianSpirits,
-        bruteSoulCores,
-        feralSoulCores,
-        phantomSoulCores,
-      ].flatMap { $0 as! [EffectCard] }
+      let spareCards: [EffectCard] =
+        weapons.map {
+          WeaponCard(weapon: $0, tone: .required)
+        }
+        + (bruteGuardianSpirits + nonBruteGuardianSpirits).map {
+          GuardianSpiritCard(guardianSpirit: $0, tone: .required)
+        }
+        + (bruteSoulCores + feralSoulCores + phantomSoulCores).map {
+          SoulCoreCard(soulCore: $0, tone: .required)
+        }
 
       return RandomizedFloors(
         logicLevel: .enhanced,

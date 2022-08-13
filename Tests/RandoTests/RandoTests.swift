@@ -38,6 +38,16 @@ final class RandoTests: XCTestCase {
     let deck = randomizer.randomize(logicLevel: .basic)
 
     XCTAssertTrue(deck.validate(logicLevel: .basic))
+
+    let allSoulCoreSelections: [Nioh2.DepthsRandomizer.SoulCoreSelection] = deck.floors
+      .flatMap { floor -> [Nioh2.DepthsRandomizer.SoulCoreSelection] in
+        let floor = floor as! Nioh2.DepthsRandomizer.DepthsFloorEffect
+
+        return [floor.guardianSpirits.primary, floor.guardianSpirits.secondary]
+      }
+
+    XCTAssertEqual(Set(allSoulCoreSelections.map { $0.guardianSpirit.name }).count, 10)
+    XCTAssertEqual(Set(allSoulCoreSelections.flatMap { $0.soulCores }.map { $0.name }).count, 30)
   }
 
   func testEnhancedDepthsRandomizer() {
@@ -45,6 +55,16 @@ final class RandoTests: XCTestCase {
     let deck = randomizer.randomize(logicLevel: .enhanced)
 
     XCTAssertTrue(deck.validate(logicLevel: .enhanced))
+
+    let allSoulCoreSelections: [Nioh2.DepthsRandomizer.SoulCoreSelection] = deck.floors
+      .flatMap { floor -> [Nioh2.DepthsRandomizer.SoulCoreSelection] in
+        let floor = floor as! Nioh2.DepthsRandomizer.DepthsFloorEffect
+
+        return [floor.guardianSpirits.primary, floor.guardianSpirits.secondary]
+      }
+
+    XCTAssertEqual(Set(allSoulCoreSelections.map { $0.guardianSpirit.name }).count, 10)
+    XCTAssertEqual(Set(allSoulCoreSelections.flatMap { $0.soulCores }.map { $0.name }).count, 30)
   }
 
 }

@@ -4,12 +4,14 @@ public protocol Randomizer {
 
 }
 
-public enum LogicLevel {
+public enum LogicLevel: String, RawRepresentable, Codable {
   case basic
   case enhanced
 }
 
 public protocol FloorEffect {
+
+  var logicLevel: LogicLevel { get }
 
   var description: String { get }
 
@@ -21,17 +23,19 @@ public protocol FloorEffect {
 
 public struct RandomizedFloors {
 
+  let logicLevel: LogicLevel
+
   let floors: [FloorEffect]
   let spareCards: [EffectCard]?
 
-  init(floors: [FloorEffect], spareCards: [EffectCard]? = nil) {
+  init(logicLevel: LogicLevel = .basic, floors: [FloorEffect], spareCards: [EffectCard]? = nil) {
+    self.logicLevel = logicLevel
     self.floors = floors
     self.spareCards = spareCards
   }
 
-  func validate(logicLevel: LogicLevel = .basic) -> Bool {
-    floors
-      .allSatisfy { $0.validate(logicLevel: logicLevel) }
+  func validate(logicLevel: LogicLevel) -> Bool {
+    logicLevel == self.logicLevel && floors.allSatisfy { $0.validate(logicLevel: logicLevel) }
   }
 
 }

@@ -33,6 +33,8 @@ extension Nioh2 {
         """
       }
 
+      let logicLevel: LogicLevel
+
       let floorNumber: Int
 
       let weapons: (WeaponCard, WeaponCard)
@@ -54,7 +56,13 @@ extension Nioh2 {
         ]
       }
 
-      func validate(logicLevel: LogicLevel = .basic) -> Bool {
+      func validate(logicLevel: LogicLevel) -> Bool {
+        guard
+          logicLevel == self.logicLevel
+        else {
+          return false
+        }
+
         let flatSoulCoresOne = [
           soulCores.0.0,
           soulCores.0.1,
@@ -144,6 +152,7 @@ extension Nioh2 {
         floors
           .append(
             DepthsFloorEffect(
+              logicLevel: .basic,
               floorNumber: floorNumber,
               weapons: (weapons.removeFirst(),weapons.removeFirst()),
               guardianSpirits: (guardianSpirits.removeFirst(), guardianSpirits.removeFirst()),
@@ -193,6 +202,7 @@ extension Nioh2 {
 
         floors.append(
           DepthsFloorEffect(
+            logicLevel: .enhanced,
             floorNumber: floorNumber,
             weapons: weapons,
             guardianSpirits: guardianSpirits,
@@ -211,6 +221,7 @@ extension Nioh2 {
       ].flatMap { $0 as! [EffectCard] }
 
       return RandomizedFloors(
+        logicLevel: .enhanced,
         floors: floors,
         spareCards: spareCards
       )
@@ -229,7 +240,7 @@ extension Nioh2 {
       while true {
         let floors = createFloors(logicLevel: logicLevel)
 
-        if (floors.validate()) {
+        if (floors.validate(logicLevel: logicLevel)) {
           return floors
         }
       }

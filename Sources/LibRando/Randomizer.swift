@@ -39,3 +39,11 @@ public struct RandomizedFloors {
   }
 
 }
+
+extension RandomizedFloors: Sequence {
+
+  public func makeIterator() -> IndexingIterator<[FloorEffect]> {
+    floors.makeIterator()
+  }
+
+}

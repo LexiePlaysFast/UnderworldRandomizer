@@ -33,6 +33,15 @@ for floor in (deck) {
   let newTime = Date()
   print(floor.description)
 
+  if (times.count == 0) {
+    print("\nTime started!")
+  } else {
+    print(
+      "\nSegment time:", format( times.last!.distance(to: newTime)),
+      "\nTotal time  :", format(times.first!.distance(to: newTime))
+    )
+  }
+
   times.append(newTime)
 }
 
@@ -40,4 +49,7 @@ print("\nTime ends when you press enter. Press enter when the last floor of the 
 _ = readLine()
 let newTime = Date()
 
-print("\nTotal time:", times.first!.distance(to: times.last!))
+print(
+  "\nSegment time:", format( times.last!.distance(to: newTime)),
+  "\nTotal time  :", format(times.first!.distance(to: newTime))
+)

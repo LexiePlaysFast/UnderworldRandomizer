@@ -55,31 +55,47 @@ extension Nioh2 {
       }
 
       func validate(logicLevel: LogicLevel = .basic) -> Bool {
-        let flatSoulCores = [
+        let flatSoulCoresOne = [
           soulCores.0.0,
           soulCores.0.1,
           soulCores.0.2,
+        ].map { $0.soulCore }
+
+        let flatSoulCoresTwo = [
           soulCores.1.0,
           soulCores.1.1,
           soulCores.1.2,
         ].map { $0.soulCore }
 
+        let flatSoulCores = flatSoulCoresOne + flatSoulCoresTwo
+
         let differentWeapons = weapons.0.weapon != weapons.1.weapon
         let differentGuardianSpirits = guardianSpirits.0.guardianSpirit != guardianSpirits.1.guardianSpirit
         let soulCoresUnique = Set(flatSoulCores.map { $0.name }).count == 6
 
-        let totalCapacity = guardianSpirits.0.guardianSpirit.attunementLimit + guardianSpirits.1.guardianSpirit.attunementLimit
-        let totalCost: Int = flatSoulCores
-          .map { $0.attunementCost }
-          .reduce(0, +)
-
-        guard totalCapacity > totalCost else {
+        guard
+          differentWeapons,
+          differentGuardianSpirits,
+          soulCoresUnique
+        else {
           return false
         }
 
-        
+        let soulCoreCostOne: Int = flatSoulCoresOne
+          .map { $0.attunementCost }
+          .reduce(0, +)
+        let soulCoreCostTwo: Int = flatSoulCoresTwo
+          .map { $0.attunementCost }
+          .reduce(0, +)
 
-        return differentWeapons && differentGuardianSpirits && soulCoresUnique
+        guard
+          guardianSpirits.0.guardianSpirit.attunementLimit >= soulCoreCostOne,
+          guardianSpirits.1.guardianSpirit.attunementLimit >= soulCoreCostTwo
+        else {
+          return false
+        }
+
+        return true
       }
     }
 

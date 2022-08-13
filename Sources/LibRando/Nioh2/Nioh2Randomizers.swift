@@ -2,16 +2,26 @@ extension Nioh2 {
 
   struct DepthsRandomizer: Randomizer {
 
+    struct WeaponPair {
+      let primary: Weapon
+      let secondary: Weapon
+
+      var areDifferent: Bool {
+        primary != secondary
+      }
+
+      var cards: [EffectCard] {
+        [ primary, secondary ]
+          .map { WeaponCard(weapon: $0, tone: .required) }
+      }
+    }
+
     struct DepthsFloorEffect: FloorEffect {
 
       var description: String {
         """
         On floor \(floorNumber) of the Depths, the following modifiers are in effect:
-          Required weapons:          \(
-            weapons.0.weapon.name
-          ) & \(
-            weapons.1.weapon.name
-          )
+          Required weapons:          \(weapons.primary.name) & \(weapons.secondary.name)
           Required guardian spirits: \(
             guardianSpirits.0.guardianSpirit.name
           ) & \(
@@ -37,14 +47,14 @@ extension Nioh2 {
 
       let floorNumber: Int
 
-      let weapons: (WeaponCard, WeaponCard)
+      let weapons: WeaponPair
       let guardianSpirits: (GuardianSpiritCard, GuardianSpiritCard)
       let soulCores: ((SoulCoreCard, SoulCoreCard, SoulCoreCard), (SoulCoreCard, SoulCoreCard, SoulCoreCard))
 
       var cards: [EffectCard] {
         [
-          weapons.0,
-          weapons.1,
+          WeaponCard(weapon: weapons.primary, tone: .required),
+          WeaponCard(weapon: weapons.secondary, tone: .required),
           guardianSpirits.0,
           guardianSpirits.1,
           soulCores.0.0,
@@ -77,7 +87,7 @@ extension Nioh2 {
 
         let flatSoulCores = flatSoulCoresOne + flatSoulCoresTwo
 
-        let differentWeapons = weapons.0.weapon != weapons.1.weapon
+        let differentWeapons = weapons.areDifferent
         let differentGuardianSpirits = guardianSpirits.0.guardianSpirit != guardianSpirits.1.guardianSpirit
         let soulCoresUnique = Set(flatSoulCores.map { $0.name }).count == 6
 
@@ -129,10 +139,6 @@ extension Nioh2 {
       }
     }
 
-    let weaponCards:         [WeaponCard] = weapons.map {
-      WeaponCard(weapon: $0, tone: .required)
-    }
-
     let guardianSpiritCards: [GuardianSpiritCard] = guardianSpirits.map {
       GuardianSpiritCard(guardianSpirit: $0, tone: .required)
     }
@@ -142,7 +148,7 @@ extension Nioh2 {
     }
 
     func basicCreateFloors() -> RandomizedFloors {
-      var weapons = weaponCards.shuffled()
+      var weapons = weapons.shuffled()
       var guardianSpirits = guardianSpiritCards.shuffled()
       var soulCores = soulCoreCards.shuffled()
 
@@ -154,7 +160,7 @@ extension Nioh2 {
             DepthsFloorEffect(
               logicLevel: .basic,
               floorNumber: floorNumber,
-              weapons: (weapons.removeFirst(),weapons.removeFirst()),
+              weapons: WeaponPair(primary: weapons.removeFirst(), secondary: weapons.removeFirst()),
               guardianSpirits: (guardianSpirits.removeFirst(), guardianSpirits.removeFirst()),
               soulCores: (
                 (soulCores.removeFirst(), soulCores.removeFirst(), soulCores.removeFirst()),
@@ -164,11 +170,17 @@ extension Nioh2 {
           )
       }
 
-      return RandomizedFloors(floors: floors, spareCards: weapons + guardianSpirits + soulCores)
+      let spareCards: [EffectCard] = [
+        weapons.map { WeaponCard(weapon: $0, tone: .required) },
+        guardianSpirits,
+        soulCores,
+      ].flatMap { $0 as! [EffectCard] }
+
+      return RandomizedFloors(floors: floors, spareCards: spareCards)
     }
 
     func enhancedCreateFloors() -> RandomizedFloors {
-      var weapons = weaponCards.shuffled()
+      var weapons = weapons.shuffled()
 
       let guardianSpirits = guardianSpiritCards.shuffled()
       var bruteGuardianSpirits = guardianSpirits.filter {
@@ -192,7 +204,7 @@ extension Nioh2 {
       var floors: [FloorEffect] = []
 
       for floorNumber in 1...5 {
-        let weapons = (weapons.removeFirst(), weapons.removeFirst())
+        let weapons = WeaponPair(primary: weapons.removeFirst(), secondary: weapons.removeFirst())
         let guardianSpirits = (bruteGuardianSpirits.removeFirst(), nonBruteGuardianSpirits.removeFirst())
 
         let soulCoresOne = (bruteSoulCores.removeFirst(), bruteSoulCores.removeFirst(), bruteSoulCores.removeFirst())
@@ -212,7 +224,7 @@ extension Nioh2 {
       }
 
       let spareCards: [EffectCard] = [
-        weapons,
+        weapons.map { WeaponCard(weapon: $0, tone: .required) },
         bruteGuardianSpirits,
         nonBruteGuardianSpirits,
         bruteSoulCores,

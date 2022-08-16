@@ -5,6 +5,14 @@ import PackageDescription
 
 let package = Package(
   name: "UnderworldRandomizer",
+  products: [
+    .library(
+      name: "LibRando",
+      targets: [
+        "LibRando"
+      ]
+    ),
+  ],
   dependencies: [
   ],
   targets: [

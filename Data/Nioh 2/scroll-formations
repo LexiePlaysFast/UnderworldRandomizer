@@ -1,19 +1,25 @@
 location,location variation,minimum difficulty,maximum difficulty,formation 1,formation 2, formation 3
+Anegawa,day,demon,damned,Flying Bolt,Oni-bi,
 Anegawa,night,strong,damned,Magara Naotaka,Magara Naosumi,Magara Takamoto
 Byodo-in,,strong,damned,Kashin Koji,Otakemaru,
-Daigo Temple,,strong,damned,Kashin Koji,Namahage,Spider
-Daigo Temple,,strong,damned,Yoki,Oni-bi,
+Daigo Temple,day,demon,damned,Kasha,Onyudo,Karakasa Umbrella
+Daigo Temple,night,strong,damned,Kashin Koji,Namahage,Spider
+Daigo Temple,night,strong,damned,Yoki,Oni-bi,
 Forest,,strong,damned,Namahage,Saika Clan,
 Honnoji,,strong,damned,Onryoki,Skeleton Warrior,
+Honnoji,,strong,damned,Kasha,Koroka,Oni-bi
 Ishiyama Honganji,,strong,damned,Gyuki,,
 Island,night,strong,damned,Onryoki,Enki,Oni-bi
 Jurakudai,,strong,damned,Lady Osakabe,,
+Jusanzakura,night,demon,damned,Mezuki,Gozuki,
 Jusanzakura,day,strong,damned,Mezuki,Karasu Tengu,Gaki
 Kanegasaki,,strong,damned,Tatarimokke,Snowclops,Ninken
 Komaki-Nagakute (The High-Spirited Demon),,strong,damned,Daidara Bocchi,,
+Mount Tenno,day,strong,damned,Azai Nagamasa,Koroka,Oni-bi
 Mount Tenno,day,strong,damned,Ryomen Sukuna,Shuten Doji,
 Mount Tenno,night,strong,damned,Magara Naotaka,Ubume,Skeleton Warrior
 Mount Tenno,night,strong,damned,Ryomen Sukuna,Nure-Onna,Gaki
 Sunomata,day,strong,damned,Hachisuka Koroku,Onyudo,Gaki
 Sunomata,night,strong,damned,Kamaitachi,Mitsume Yazura,Warrior
 The Viper's Sanctum,day,strong,damned,Otakemaru,Red Kappa,Skeleton Warrior
+Yashima,night,demon,damned,Nue,Bakegani,Lesser Umi-bozu

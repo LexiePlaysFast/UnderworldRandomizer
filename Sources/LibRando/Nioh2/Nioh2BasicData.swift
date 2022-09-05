@@ -42,6 +42,8 @@ extension Nioh2 {
     let smallSudama: Int?
     let largeSudama: Int?
     let darkRealms: Int?
+    let majorEnemies: Int?
+    let bigChests: Int?
 
     static func == (lhs: Nioh2.FloorLayout, rhs: Nioh2.FloorLayout) -> Bool {
       lhs.name == rhs.name

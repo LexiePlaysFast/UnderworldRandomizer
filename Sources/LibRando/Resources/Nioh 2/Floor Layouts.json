@@ -33,7 +33,13 @@
 }, {
   "name": "Komaki-Nagakute (Two Faces of Hospitality)"
 }, {
-  "name": "Kurama"
+  "name": "Kurama",
+  "scampuss": 1,
+  "smallSudama": 1,
+  "largeSudama": 0,
+  "darkRealms": 1,
+  "majorEnemies": 6,
+  "bigChests": 4
 }, {
   "name": "Mount Ibuki"
 }, {

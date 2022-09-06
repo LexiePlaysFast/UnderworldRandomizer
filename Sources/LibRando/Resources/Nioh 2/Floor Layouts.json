@@ -85,7 +85,14 @@
   "bigChests": 3,
   "hotSprings": 1
 }, {
-  "name": "Sunomata"
+  "name": "Sunomata",
+  "scampuss": 2,
+  "smallSudama": 0,
+  "largeSudama": 1,
+  "darkRealms": 1,
+  "majorEnemies": 3,
+  "bigChests": 3,
+  "hotSprings": 0
 }, {
   "name": "Suzuka Pass"
 }, {

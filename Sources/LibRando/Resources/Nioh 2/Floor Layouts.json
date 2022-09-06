@@ -31,7 +31,14 @@
 }, {
   "name": "Komaki-Nagakute (The High-Spirited Demon)"
 }, {
-  "name": "Komaki-Nagakute (Two Faces of Hospitality)"
+  "name": "Komaki-Nagakute (Two Faces of Hospitality)",
+  "scampuss": 2,
+  "smallSudama": 0,
+  "largeSudama": 1,
+  "darkRealms": 3,
+  "majorEnemies": 1,
+  "bigChests": 4,
+  "hotSprings": 0
 }, {
   "name": "Kurama",
   "scampuss": 1,

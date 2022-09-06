@@ -1,6 +1,7 @@
 location,location variation,minimum difficulty,maximum difficulty,formation 1,formation 2, formation 3
 Anegawa,day,demon,damned,Flying Bolt,Oni-bi,
 Anegawa,night,strong,damned,Magara Naotaka,Magara Naosumi,Magara Takamoto
+Burial Temple,night,nioh,damned,Red Kappa,Saika Clan,
 Byodo-in,,strong,damned,Kashin Koji,Otakemaru,
 Byodo-in,,wise,damned,Shuten Doji,One-eyed Oni,Oni-bi
 Byodo-in,,wise,damned,Enenra,Red Kappa,The Sohaya
@@ -10,6 +11,7 @@ Daigo Temple,night,strong,damned,Kashin Koji,Namahage,Spider
 Daigo Temple,night,strong,damned,Yoki,Oni-bi,
 Daigo Temple,night,strong,damned,Kato Kiyomasa,Fukushima Masanori,Kata Yoshiaki
 Forest,,strong,damned,Namahage,Saika Clan,
+Forest,,nioh,damned,Saito Yoshitatsu,Tesso,Saika Clan
 Heian Palace,,wise,damned,Lightning Gods of Yomi,Underworld Soldier,Toxic Slime
 Heian Palace,,wise,damned,Saito Toshimitsu,Ashiya Doman,
 Honnoji,,demon,damned,Enenra,Wheelmonk,Outlaw

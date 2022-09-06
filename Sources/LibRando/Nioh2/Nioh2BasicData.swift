@@ -44,6 +44,7 @@ extension Nioh2 {
     let darkRealms: Int?
     let majorEnemies: Int?
     let bigChests: Int?
+    let hotSprings: Int?
 
     static func == (lhs: Nioh2.FloorLayout, rhs: Nioh2.FloorLayout) -> Bool {
       lhs.name == rhs.name

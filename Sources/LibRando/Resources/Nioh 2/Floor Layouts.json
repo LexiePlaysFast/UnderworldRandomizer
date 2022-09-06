@@ -39,7 +39,8 @@
   "largeSudama": 0,
   "darkRealms": 1,
   "majorEnemies": 6,
-  "bigChests": 4
+  "bigChests": 4,
+  "hotSprings": 0
 }, {
   "name": "Mount Ibuki"
 }, {
@@ -61,7 +62,14 @@
 }, {
   "name": "Shigisan Castle"
 }, {
-  "name": "Spirit Stone Mine"
+  "name": "Spirit Stone Mine",
+  "scampuss": 2,
+  "smallSudama": 2,
+  "largeSudama": 0,
+  "darkRealms": 1,
+  "majorEnemies": 3,
+  "bigChests": 3,
+  "hotSprings": 1
 }, {
   "name": "Sunomata"
 }, {

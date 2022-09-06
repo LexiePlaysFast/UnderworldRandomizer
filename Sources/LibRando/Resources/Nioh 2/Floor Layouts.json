@@ -25,7 +25,14 @@
 }, {
   "name": "Jusanzakura"
 }, {
-  "name": "Kanegasaki"
+  "name": "Kanegasaki",
+  "scampuss": 1,
+  "smallSudama": 0,
+  "largeSudama": 0,
+  "darkRealms": 1,
+  "majorEnemies": 5,
+  "bigChests": 3,
+  "hotSprings": 1
 }, {
   "name": "Kitanosho Castle"
 }, {

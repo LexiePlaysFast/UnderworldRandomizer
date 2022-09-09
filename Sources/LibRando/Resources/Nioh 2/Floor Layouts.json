@@ -1,5 +1,12 @@
 [ {
-  "name": "Anegawa"
+  "name": "Anegawa",
+  "scampuss": 2,
+  "smallSudama": 0,
+  "largeSudama": 0,
+  "darkRealms": 1,
+  "majorEnemies": 4,
+  "bigChests": 3,
+  "hotSprings": 0
 }, {
   "name": "Bathhouse"
 }, {
@@ -9,7 +16,14 @@
 }, {
   "name": "Daigo Temple"
 }, {
-  "name": "Forest"
+  "name": "Forest",
+  "scampuss": 2,
+  "smallSudama": 0,
+  "largeSudama": 0,
+  "darkRealms": 0,
+  "majorEnemies": 3,
+  "bigChests": 0,
+  "hotSprings": 0
 }, {
   "name": "Heian Palace"
 }, {
@@ -17,7 +31,14 @@
 }, {
   "name": "Inabayama Castle"
 }, {
-  "name": "Ishiyama Honganji"
+  "name": "Ishiyama Honganji",
+  "scampuss": 2,
+  "smallSudama": 1,
+  "largeSudama": 0,
+  "darkRealms": 0,
+  "majorEnemies": 4,
+  "bigChests": 1,
+  "hotSprings": 0
 }, {
   "name": "Island"
 }, {
@@ -59,12 +80,33 @@
   "name": "Mount Ibuki"
 }, {
   "name": "Mount Tenno"
+  "scampuss": 1,
+  "smallSudama": 0,
+  "largeSudama": 0,
+  "darkRealms": 0,
+  "majorEnemies": 5,
+  "bigChests": 2,
+  "hotSprings": 0
 }, {
   "name": "Mountain Temple"
 }, {
-  "name": "Nanbanji"
+  "name": "Nanbanji",
+  "scampuss": 1,
+  "smallSudama": 0,
+  "largeSudama": 0,
+  "darkRealms": 1,
+  "majorEnemies": 3,
+  "bigChests": 3,
+  "hotSprings": 0
 }, {
-  "name": "Odani Castle"
+  "name": "Odani Castle",
+  "scampuss": 2,
+  "smallSudama": 0,
+  "largeSudama": 0,
+  "darkRealms": 1,
+  "majorEnemies": 6,
+  "bigChests": 3,
+  "hotSprings": 1
 }, {
   "name": "Okehazama"
 }, {
@@ -102,7 +144,14 @@
 }, {
   "name": "Todai-ji Temple"
 }, {
-  "name": "Volcano Temple"
+  "name": "Volcano Temple",
+  "scampuss": 2,
+  "smallSudama": 0,
+  "largeSudama": 1,
+  "darkRealms": 1,
+  "majorEnemies": 5,
+  "bigChests": 4,
+  "hotSprings": 0
 }, {
   "name": "Yashima"
 } ]

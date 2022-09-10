@@ -1,6 +1,7 @@
 location,location variation,minimum difficulty,maximum difficulty,formation 1,formation 2, formation 3
 Anegawa,day,demon,damned,Flying Bolt,Oni-bi,
 Anegawa,night,strong,damned,Magara Naotaka,Magara Naosumi,Magara Takamoto
+Burial Temple,evening,nioh,damned,Kukai,Akechi Mitsuhide,Li Naotora
 Burial Temple,night,strong,damned,Red Kappa,Saika Clan,
 Burial Temple,night,nioh,damned,Hachisuka Koroku,Rokurokubi,Oni-bi
 Byodo-in,,strong,damned,Kashin Koji,Otakemaru,
@@ -24,9 +25,11 @@ Honnoji,,demon,damned,Shibata Katsuie,Enki,Warrior
 Honnoji,,strong,damned,Kasha,Koroka,Oni-bi
 Honnoji,,strong,damned,Onryoki,Skeleton Warrior,
 Honnoji,,wise,damned,Enenra,Kasha,
+Honnoji,,nioh,damned,Wheelmonk,Spider,
 Ishiyama Honganji,reservoir,strong,damned,Gyuki,,
 Ishiyama Honganji,hall,wise,damned,Saika Magoichi,Kosuzume,Hotaru
 Island,day,demon,damned,Maeda Toshiie,Maeda Keiji,Sengoku Hidehisa
+Island,day,strong,damned,Magatsu Warrior,Oni-bi,
 Island,evening,nioh,damned,Yatsu-no-Kami,Yoki,The Sohaya
 Island,night,strong,damned,Onryoki,Enki,Oni-bi
 Jurakudai,,strong,damned,Lady Osakabe,,

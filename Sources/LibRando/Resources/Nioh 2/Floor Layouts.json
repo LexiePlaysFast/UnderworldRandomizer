@@ -43,7 +43,14 @@
 }, {
   "name": "Honnoji"
 }, {
-  "name": "Inabayama Castle"
+  "name": "Inabayama Castle",
+  "scampuss": 2,
+  "smallSudama": 1,
+  "largeSudama": 0,
+  "darkRealms": 1,
+  "majorEnemies": 6,
+  "bigChests": 3,
+  "hotSprings": 1
 }, {
   "name": "Ishiyama Honganji",
   "scampuss": 2,
@@ -69,7 +76,14 @@
   "bigChests": 3,
   "hotSprings": 1
 }, {
-  "name": "Kitanosho Castle"
+  "name": "Kitanosho Castle",
+  "scampuss": 3,
+  "smallSudama": 0,
+  "largeSudama": 3,
+  "darkRealms": 2,
+  "majorEnemies": 5,
+  "bigChests": 5,
+  "hotSprings": 1
 }, {
   "name": "Komaki-Nagakute (The High-Spirited Demon)",
   "scampuss": 2,
@@ -188,5 +202,12 @@
   "bigChests": 4,
   "hotSprings": 0
 }, {
-  "name": "Yashima"
+  "name": "Yashima",
+  "scampuss": 0,
+  "smallSudama": 0,
+  "largeSudama": 0,
+  "darkRealms": 0,
+  "majorEnemies": 6,
+  "bigChests": 4,
+  "hotSprings": 0
 } ]

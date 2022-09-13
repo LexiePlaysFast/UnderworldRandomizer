@@ -39,7 +39,14 @@
   "bigChests": 0,
   "hotSprings": 0
 }, {
-  "name": "Heian Palace"
+  "name": "Heian Palace",
+  "scampuss": 2,
+  "smallSudama": 1,
+  "largeSudama": 0,
+  "darkRealms": 1,
+  "majorEnemies": 5,
+  "bigChests": 3,
+  "hotSprings": 0
 }, {
   "name": "Honnoji"
 }, {
@@ -65,7 +72,14 @@
 }, {
   "name": "Jurakudai"
 }, {
-  "name": "Jusanzakura"
+  "name": "Jusanzakura",
+  "scampuss": 2,
+  "smallSudama": 0,
+  "largeSudama": 1,
+  "darkRealms": 1,
+  "majorEnemies": 2,
+  "bigChests": 3,
+  "hotSprings": 0
 }, {
   "name": "Kanegasaki",
   "scampuss": 1,
@@ -151,7 +165,14 @@
 }, {
   "name": "Rashomon"
 }, {
-  "name": "Shigisan Castle"
+  "name": "Shigisan Castle",
+  "scampuss": 2,
+  "smallSudama": 0,
+  "largeSudama": 2,
+  "darkRealms": 3,
+  "majorEnemies": 4,
+  "bigChests": 3,
+  "hotSprings": 0
 }, {
   "name": "Spirit Stone Mine",
   "scampuss": 2,

@@ -4,6 +4,7 @@ Anegawa,night,strong,damned,Magara Naotaka,Magara Naosumi,Magara Takamoto
 Burial Temple,evening,nioh,damned,Kukai,Akechi Mitsuhide,Li Naotora
 Burial Temple,night,strong,damned,Red Kappa,Saika Clan,
 Burial Temple,night,nioh,damned,Hachisuka Koroku,Rokurokubi,Oni-bi
+Burial Temple,night,nioh,damned,Gozuki,Namahage,The Sohaya
 Byodo-in,,strong,damned,Kashin Koji,Otakemaru,
 Byodo-in,,demon,damned,Shuten Doji,One-eyed Oni,Oni-bi
 Byodo-in,,wise,damned,Enenra,Red Kappa,The Sohaya
@@ -39,6 +40,7 @@ Jusanzakura,night,demon,damned,Tokichiro (Dream),Yoki,Oni-bi
 Jusanzakura,night,wise,damned,Gozuki,Ippon-Datara,Aberrant Soldier
 Kanegasaki,,strong,damned,Tatarimokke,Rokurokubi,Aberrant Soldier
 Kanegasaki,,strong,damned,Tatarimokke,Snowclops,Ninken
+Kanegasaki,,nioh,damned,Saito Yoshitatsu,Wheelmonk,Ninja
 Komaki-Nagakute (The High-Spirited Demon),,strong,damned,Daidara Bocchi,,
 Komaki-Nagakute (Two Faces of Hospitality),,nioh,damned,Tokichiro (Twilight),Mori Nagayoshi,Ikeda Tsuneoki
 Kurama,waterfall,demon,damned,Benkei,Bakegani,Aberrant Soldier
@@ -54,9 +56,11 @@ Oniga Castle,,nioh,damned,Tate Eboshi,Nightmare Bringer,
 Spirit Stone Mine,,demon,damned,Taira no Kagekiyo,Nuppeppo,Warrior
 Spirit Stone Mine,,wise,damned,Benkei,Nuppeppo,Gaki
 Spirit Stone Mine,,wise,damned,Benkei,Minamoto no Yoshitsune,
-Spirit Stone Mine,,demon,damned,Minamoto no Yoshitsune,Nuppeppo,Aberrant Soldier
+Spirit Stone Mine,night,demon,damned,Minamoto no Yoshitsune,Nuppeppo,Aberrant Soldier
 Sunomata,day,strong,damned,Hachisuka Koroku,Onyudo,Gaki
 Sunomata,night,strong,damned,Kamaitachi,Mitsume Yazura,Warrior
+Suzuka Pass,,nioh,damned,Tate Eboshi,Ongyoki,Kinki
 The Viper's Sanctum,day,strong,damned,Otakemaru,Red Kappa,Skeleton Warrior
 Todai-ji Temple,,wise,damned,Giant Toad,Yasha,Oni-bi
 Yashima,night,demon,damned,Nue,Bakegani,Lesser Umi-bozu
+Yashima,night,nioh,damned,Uniyudo,,

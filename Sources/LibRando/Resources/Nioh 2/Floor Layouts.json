@@ -10,7 +10,14 @@
 }, {
   "name": "Bathhouse"
 }, {
-  "name": "Burial Temple"
+  "name": "Burial Temple",
+  "scampuss": 1,
+  "smallSudama": 2,
+  "largeSudama": 0,
+  "darkRealms": 2,
+  "majorEnemies": 4,
+  "bigChests": 1,
+  "hotSprings": 0
 }, {
   "name": "Byodo-in",
   "scampuss": 3,
@@ -48,7 +55,14 @@
   "bigChests": 3,
   "hotSprings": 0
 }, {
-  "name": "Honnoji"
+  "name": "Honnoji",
+  "scampuss": 2,
+  "smallSudama": 0,
+  "largeSudama": 1,
+  "darkRealms": 2,
+  "majorEnemies": 5,
+  "bigChests": 5,
+  "hotSprings": 0
 }, {
   "name": "Inabayama Castle",
   "scampuss": 2,
@@ -68,9 +82,23 @@
   "bigChests": 1,
   "hotSprings": 0
 }, {
-  "name": "Island"
+  "name": "Island",
+  "scampuss": 1,
+  "smallSudama": 0,
+  "largeSudama": 1,
+  "darkRealms": 3,
+  "majorEnemies": 3,
+  "bigChests": 2,
+  "hotSprings": 1
 }, {
-  "name": "Jurakudai"
+  "name": "Jurakudai",
+  "scampuss": 3,
+  "smallSudama": 0,
+  "largeSudama": 0,
+  "darkRealms": 0,
+  "majorEnemies": 2,
+  "bigChests": 2,
+  "hotSprings": 1
 }, {
   "name": "Jusanzakura",
   "scampuss": 2,

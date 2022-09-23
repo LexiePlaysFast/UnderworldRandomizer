@@ -8,7 +8,14 @@
   "bigChests": 3,
   "hotSprings": 0
 }, {
-  "name": "Bathhouse"
+  "name": "Bathhouse",
+  "scampuss": 3,
+  "smallSudama": 0,
+  "largeSudama": 0,
+  "darkRealms": 2,
+  "majorEnemies": 3,
+  "bigChests": 2,
+  "hotSprings": 7
 }, {
   "name": "Burial Temple",
   "scampuss": 1,
@@ -185,7 +192,14 @@
   "bigChests": 3,
   "hotSprings": 1
 }, {
-  "name": "Okehazama"
+  "name": "Okehazama",
+  "scampuss": 3,
+  "smallSudama": 0,
+  "largeSudama": 3,
+  "darkRealms": 2,
+  "majorEnemies": 5,
+  "bigChests": 6,
+  "hotSprings": 0
 }, {
   "name": "Oniga Castle"
 }, {
@@ -240,7 +254,14 @@
   "bigChests": 3,
   "hotSprings": 1
 }, {
-  "name": "Todai-ji Temple"
+  "name": "Todai-ji Temple",
+  "scampuss": 1,
+  "smallSudama": 0,
+  "largeSudama": 0,
+  "darkRealms": 1,
+  "majorEnemies": 4,
+  "bigChests": 3,
+  "hotSprings": 0
 }, {
   "name": "Volcano Temple",
   "scampuss": 2,

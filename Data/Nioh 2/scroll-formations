@@ -12,6 +12,7 @@ Byodo-in,,wise,damned,Enenra,Red Kappa,The Sohaya
 Daigo Temple,day,demon,damned,Kasha,Onyudo,Karakasa Umbrella
 Daigo Temple,day,demon,damned,Ryomen Sukuna,Tesso,Oni-bi
 Daigo Temple,day,nioh,damned,Tokichiro (Dream),Magatsu Warrior,Skeleton Warrior
+Daigo Temple,day,nioh,damned,Lightning Gods of Yomi,Hellish Hag,Onmyo Mage
 Daigo Temple,night,demon,damned,Azai Nagamasa,Shibata Katsuie,
 Daigo Temple,night,demon,damned,Hachisuka Koroku,Red Kappa,Kappa
 Daigo Temple,night,strong,damned,Kashin Koji,Namahage,Spider
@@ -29,7 +30,7 @@ Honnoji,,demon,damned,Shibata Katsuie,Enki,Warrior
 Honnoji,,strong,damned,Kasha,Koroka,Oni-bi
 Honnoji,,strong,damned,Onryoki,Skeleton Warrior,
 Honnoji,,wise,damned,Enenra,Kasha,
-Honnoji,,nioh,damned,Wheelmonk,Spider,
+Honnoji,,wise,damned,Wheelmonk,Spider,
 Ishiyama Honganji,reservoir,strong,damned,Gyuki,,
 Ishiyama Honganji,hall,wise,damned,Saika Magoichi,Kosuzume,Hotaru
 Island,day,demon,damned,Maeda Toshiie,Maeda Keiji,Sengoku Hidehisa
@@ -38,11 +39,14 @@ Island,evening,nioh,damned,Yatsu-no-Kami,Yoki,The Sohaya
 Island,night,strong,damned,Onryoki,Enki,Oni-bi
 Island,night,nioh,damned,Shuten Doji,Nue,
 Island,night,nioh,damned,Tatarimokke,Yatsu-no-kami,
-Jurakudai,,strong,damned,Lady Osakabe,,
+Jurakudai,roof,strong,damned,Lady Osakabe,,
+Jurakudai,hall,nioh,damned,Onryoki,Magara Naotaka,
 Jusanzakura,day,strong,damned,Mezuki,Karasu Tengu,Gaki
 Jusanzakura,night,demon,damned,Mezuki,Gozuki,
 Jusanzakura,night,demon,damned,Tokichiro (Dream),Yoki,Oni-bi
 Jusanzakura,night,wise,damned,Gozuki,Ippon-Datara,Aberrant Soldier
+Jusanzakura,night,nioh,damned,Williham,Mumyo,Hattori Hanzo
+Jusanzakura,night,nioh,damned,Ippon-Datara,Lesser Umi-bozu,
 Kanegasaki,,strong,damned,Tatarimokke,Rokurokubi,Aberrant Soldier
 Kanegasaki,,strong,damned,Tatarimokke,Snowclops,Ninken
 Kanegasaki,,nioh,damned,Saito Yoshitatsu,Wheelmonk,Ninja
@@ -60,18 +64,25 @@ Mount Tenno,night,strong,damned,Ryomen Sukuna,Nure-Onna,Gaki
 Okehazama,,wise,damned,Imagawa Yoshimoto,Okabe Motonobu,Okabe Masatsuna
 Oniga Castle,,nioh,damned,Nightmare Bringer,Itsumade,Harinobo
 Oniga Castle,,nioh,damned,Tate Eboshi,Nightmare Bringer,
+Oniga Castle,,nioh,damned,Shuten Doji,Nightmare Bringer,
 Pagoda,,nioh,damned,Ren Hayabusa,Ancient Nyotengu,
-Rashomon,,nioh,damned,Tsuchigumo,Lightning Gods of Yomi,
+Rashomon,pit,nioh,damned,Tsuchigumo,Lightning Gods of Yomi,
+Rashomon,pit,wise,damned,Tsuchigumo,Oboroguruma,Oni-bi
+Rashomon,arena,nioh,damned,Giant Toad,Yoki,Ninja
 Spirit Stone Mine,day,demon,damned,Taira no Kagekiyo,Nuppeppo,Warrior
 Spirit Stone Mine,night,wise,damned,Benkei,Nuppeppo,Gaki
 Spirit Stone Mine,day,wise,damned,Benkei,Minamoto no Yoshitsune,
 Spirit Stone Mine,night,demon,damned,Minamoto no Yoshitsune,Nuppeppo,Aberrant Soldier
 Sunomata,day,strong,damned,Hachisuka Koroku,Onyudo,Gaki
+Sunomata,day,wise,damned,Kamaitachi,Saito Yoshitatsu,
 Sunomata,night,strong,damned,Kamaitachi,Mitsume Yazura,Warrior
 Sunomata,night,nioh,damned,Kamaitachi,Skeleton Warrior,Ninja
 Suzuka Pass,,nioh,damned,Tate Eboshi,Ongyoki,Kinki
 Suzuka Pass,,nioh,damned,Itsumade,Fox Spirit,
 The Viper's Sanctum,day,strong,damned,Otakemaru,Red Kappa,Skeleton Warrior
+The Viper's Sanctum,day,wise,damned,Yatsu-no-Kami,Yamanba,One-eyed imp
+The Viper's Sanctum,night,wise,damned,Shuten Doji,Spider,Dweller
 Todai-ji Temple,,wise,damned,Giant Toad,Yasha,Oni-bi
+Todai-ji Temple,,nioh,damned,Hellish Hag,Lesser Umi-bozu,
 Yashima,night,demon,damned,Nue,Bakegani,Lesser Umi-bozu
 Yashima,night,nioh,damned,Uniyudo,,

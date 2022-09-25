@@ -22,7 +22,7 @@ Forest,,strong,damned,Namahage,Saika Clan,
 Forest,,nioh,damned,Saito Yoshitatsu,Tesso,Saika Clan
 Heian Palace,,wise,damned,Lightning Gods of Yomi,Underworld Soldier,Toxic Slime
 Heian Palace,,wise,damned,Saito Toshimitsu,Ashiya Doman,
-Heian Palace,,nioh,damned,Oboroguruma,Fox Spirit,
+Heian Palace,,wise,damned,Oboroguruma,Fox Spirit,
 Heian Palace,,nioh,damned,White Tiger,Hellish Hag,Fox Spirit
 Heian Palace,,nioh,damned,White Tiger,Underworld Soldier,Ninja
 Honnoji,,demon,damned,Enenra,Wheelmonk,Outlaw
@@ -69,8 +69,10 @@ Oniga Castle,,nioh,damned,Tate Eboshi,Nightmare Bringer,
 Oniga Castle,,nioh,damned,Shuten Doji,Nightmare Bringer,
 Oniga Castle,,nioh,damned,Lightning Gods of Yomi,Otakemaru (The First Samurai),
 Pagoda,,nioh,damned,Ren Hayabusa,Ancient Nyotengu,
+Pagoda,,nioh,damned,Tate Eboshi,Suiki,Konaki-Jiji
 Rashomon,pit,nioh,damned,Tsuchigumo,Lightning Gods of Yomi,
 Rashomon,pit,wise,damned,Tsuchigumo,Oboroguruma,Oni-bi
+Rashomon,pit,nioh,damned,Tsuchigumo,Yasha,Spider
 Rashomon,arena,nioh,damned,Giant Toad,Yoki,Ninja
 Spirit Stone Mine,day,demon,damned,Taira no Kagekiyo,Nuppeppo,Warrior
 Spirit Stone Mine,night,wise,damned,Benkei,Nuppeppo,Gaki
@@ -89,4 +91,5 @@ The Viper's Sanctum,night,wise,damned,Shuten Doji,Spider,Dweller
 Todai-ji Temple,,wise,damned,Giant Toad,Yasha,Oni-bi
 Todai-ji Temple,,nioh,damned,Hellish Hag,Lesser Umi-bozu,
 Yashima,night,demon,damned,Nue,Bakegani,Lesser Umi-bozu
+Yashima,night,nioh,damned,Bakegani,Lesser Umi-bozu,
 Yashima,night,nioh,damned,Umiyudo,,

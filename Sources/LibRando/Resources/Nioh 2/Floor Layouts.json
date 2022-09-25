@@ -161,7 +161,14 @@
   "bigChests": 4,
   "hotSprings": 0
 }, {
-  "name": "Mount Ibuki"
+  "name": "Mount Ibuki",
+  "scampuss": 2,
+  "smallSudama": 0,
+  "largeSudama": 1,
+  "darkRealms": 1,
+  "majorEnemies": 4,
+  "bigChests": 3,
+  "hotSprings": 0
 }, {
   "name": "Mount Tenno"
   "scampuss": 1,
@@ -172,7 +179,14 @@
   "bigChests": 2,
   "hotSprings": 0
 }, {
-  "name": "Mountain Temple"
+  "name": "Mountain Temple",
+  "scampuss": 3,
+  "smallSudama": 0,
+  "largeSudama": 1,
+  "darkRealms": 0,
+  "majorEnemies": 5,
+  "bigChests": 4,
+  "hotSprings": 0
 }, {
   "name": "Nanbanji",
   "scampuss": 1,
@@ -205,7 +219,14 @@
 }, {
   "name": "Pagoda"
 }, {
-  "name": "Rashomon"
+  "name": "Rashomon",
+  "scampuss": 1,
+  "smallSudama": 0,
+  "largeSudama": 1,
+  "darkRealms": 1,
+  "majorEnemies": 8,
+  "bigChests": 4,
+  "hotSprings": 0
 }, {
   "name": "Shigisan Castle",
   "scampuss": 2,

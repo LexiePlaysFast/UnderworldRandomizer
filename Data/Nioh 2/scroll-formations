@@ -17,7 +17,7 @@ Daigo Temple,night,demon,damned,Azai Nagamasa,Shibata Katsuie,
 Daigo Temple,night,demon,damned,Hachisuka Koroku,Red Kappa,Kappa
 Daigo Temple,night,strong,damned,Kashin Koji,Namahage,Spider
 Daigo Temple,night,strong,damned,Yoki,Oni-bi,
-Daigo Temple,night,strong,damned,Kato Kiyomasa,Fukushima Masanori,Kata Yoshiaki
+Daigo Temple,night,strong,damned,Kato Kiyomasa,Fukushima Masanori,Kato Yoshiaki
 Forest,,strong,damned,Namahage,Saika Clan,
 Forest,,nioh,damned,Saito Yoshitatsu,Tesso,Saika Clan
 Heian Palace,,wise,damned,Lightning Gods of Yomi,Underworld Soldier,Toxic Slime
@@ -43,6 +43,7 @@ Island,night,nioh,damned,Tatarimokke,Yatsu-no-kami,
 Jurakudai,roof,strong,damned,Lady Osakabe,,
 Jurakudai,hall,nioh,damned,Onryoki,Magara Naotaka,
 Jusanzakura,day,strong,damned,Mezuki,Karasu Tengu,Gaki
+Jusanzakura,day,nioh,damned,Kashin Koji,Mitsume Yazura,Dweller
 Jusanzakura,night,demon,damned,Mezuki,Gozuki,
 Jusanzakura,night,demon,damned,Tokichiro (Dream),Yoki,Oni-bi
 Jusanzakura,night,wise,damned,Gozuki,Ippon-Datara,Aberrant Soldier
@@ -56,6 +57,8 @@ Komaki-Nagakute (Two Faces of Hospitality),,nioh,damned,Tokichiro (Twilight),Mor
 Kurama,waterfall,demon,damned,Benkei,Bakegani,Aberrant Soldier
 Kurama,waterfall,wise,damned,Nue,Kiryoki,Oni-bi
 Kurama,waterfall,nioh,damned,Ancient Nyotengu,Karasu Tengu,Ubume
+Kurama,waterfall,nioh,damned,Hattori Hanzo,Giant Toad,
+Kurama,arena,nioh,damned,Minamoto no Yoshitsune,Kiryoki,Bakegani
 Mount Tenno,day,strong,damned,Azai Nagamasa,Koroka,Oni-bi
 Mount Tenno,day,strong,damned,Ryomen Sukuna,Shuten Doji,
 Mount Tenno,day,wise,damned,Mitsume Yazura,Oni-bi,
@@ -85,11 +88,14 @@ Sunomata,night,strong,damned,Kamaitachi,Mitsume Yazura,Warrior
 Sunomata,night,nioh,damned,Kamaitachi,Skeleton Warrior,Ninja
 Suzuka Pass,,nioh,damned,Tate Eboshi,Ongyoki,Kinki
 Suzuka Pass,,nioh,damned,Itsumade,Fox Spirit,
+Suzuka Pass,,nioh,damned,Otakemaru (The First Samurai),Itsumade,Konaki-Jiji
 The Viper's Sanctum,day,strong,damned,Otakemaru,Red Kappa,Skeleton Warrior
 The Viper's Sanctum,day,wise,damned,Yatsu-no-Kami,Yamanba,One-eyed imp
 The Viper's Sanctum,night,wise,damned,Shuten Doji,Spider,Dweller
+The Viper's Sanctum,night,nioh,damned,Waira,Toxic Slime,
 Todai-ji Temple,,wise,damned,Giant Toad,Yasha,Oni-bi
 Todai-ji Temple,,nioh,damned,Hellish Hag,Lesser Umi-bozu,
 Yashima,night,demon,damned,Nue,Bakegani,Lesser Umi-bozu
 Yashima,night,nioh,damned,Bakegani,Lesser Umi-bozu,
 Yashima,night,nioh,damned,Umiyudo,,
+Yashima,day,nioh,damned,Otakemaru (The First Samurai),Kinki,Fox Spirit

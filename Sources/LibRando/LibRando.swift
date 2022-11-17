@@ -56,7 +56,6 @@ enum Nioh2: Game {
 
   static let soulCores:        [SoulCore]        = loadFile("Soul Cores")!
   static let guardianSpirits:  [GuardianSpirit]  = loadFile("Guardian Spirits")!
-  static let weapons:          [Weapon]          = loadFile("Weapons")!
 
   static let bosses:           [Boss]            = loadFile("Bosses")!
   static let floorLayouts:     [FloorLayout]     = loadFile("Floor Layouts")!

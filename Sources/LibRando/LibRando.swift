@@ -44,9 +44,6 @@ enum Nioh: Game {
 
   static let randomizers: [String: Randomizer] = [:]
 
-  static let weapons:         [Weapon]         = loadFile("Weapons")!
-  static let guardianSpirits: [GuardianSpirit] = loadFile("Guardian Spirits")!
-
 }
 
 enum Nioh2: Game {

@@ -27,7 +27,6 @@ let package = Package(
       dependencies: [
       ],
       resources: [
-        .copy("Resources/Nioh"),
         .copy("Resources/Nioh 2/"),
       ]
     ),

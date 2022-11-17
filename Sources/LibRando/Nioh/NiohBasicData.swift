@@ -12,6 +12,11 @@ extension Nioh {
     let name: String
     let element: Nioh.Element
 
+    init(name: String, element: Nioh.Element) {
+      self.name = name
+      self.element = element
+    }
+
     static func == (lhs: Nioh.GuardianSpirit, rhs: Nioh.GuardianSpirit) -> Bool {
       lhs.name == rhs.name
     }

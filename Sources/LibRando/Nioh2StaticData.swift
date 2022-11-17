@@ -82,6 +82,50 @@ extension Nioh2 {
 
 extension Nioh2 {
 
+  static let guardianSpirits: [GuardianSpirit] = [
+    GuardianSpirit(name: "Makami",           element: .fire,       type: .brute,   attunementLimit: 20),
+    GuardianSpirit(name: "Ame-no-Mitori",    element: .lightning,  type: .feral,   attunementLimit: 21),
+    GuardianSpirit(name: "Kagewani",         element: .water,      type: .phantom, attunementLimit: 24),
+    GuardianSpirit(name: "Okuri-Inu",        element: .fire,       type: .brute,   attunementLimit: 22),
+    GuardianSpirit(name: "Masaru",           element: .fire,       type: .feral,   attunementLimit: 23),
+    GuardianSpirit(name: "Shirohami",        element: .water,      type: .brute,   attunementLimit: 21),
+    GuardianSpirit(name: "Hyobishin",        element: .fire,       type: .brute,   attunementLimit: 24),
+    GuardianSpirit(name: "Nekomata",         element: .lightning,  type: .feral,   attunementLimit: 22),
+    GuardianSpirit(name: "Yaonami-Hime",     element: .water,      type: .feral,   attunementLimit: 23),
+    GuardianSpirit(name: "Rokugezo",         element: .lightning,  type: .phantom, attunementLimit: 23),
+    GuardianSpirit(name: "Usura-Hicho",      element: .water,      type: .phantom, attunementLimit: 20),
+    GuardianSpirit(name: "Shin-Roku",        element: .lightning,  type: .brute,   attunementLimit: 24),
+    GuardianSpirit(name: "Hiyokucho",        element: .water,      type: .feral,   attunementLimit: 22),
+    GuardianSpirit(name: "Tengen Kujaku",    element: .fire,       type: .phantom, attunementLimit: 24),
+    GuardianSpirit(name: "Nine Tails",       element: .fire,       type: .phantom, attunementLimit: 23),
+    GuardianSpirit(name: "Atlas Bear",       element: .lightning,  type: .brute,   attunementLimit: 20),
+    GuardianSpirit(name: "Genbu",            element: .water,      type: .phantom, attunementLimit: 24),
+    GuardianSpirit(name: "Gyokuto",          element: .lightning,  type: .feral,   attunementLimit: 20),
+    GuardianSpirit(name: "Saoirse",          element: .water,      type: .phantom, attunementLimit: 20),
+    GuardianSpirit(name: "Yumehami",         element: .lightning,  type: .phantom, attunementLimit: 21),
+    GuardianSpirit(name: "Isanagami",        element: .water,      type: .brute,   attunementLimit: 24),
+    GuardianSpirit(name: "Hakutaku",         element: .lightning,  type: .phantom, attunementLimit: 23),
+    GuardianSpirit(name: "Inosasao",         element: .fire,       type: .brute,   attunementLimit: 21),
+    GuardianSpirit(name: "Yatagarasu",       element: .fire,       type: .feral,   attunementLimit: 22),
+    GuardianSpirit(name: "Itokuri",          element: .water,      type: .feral,   attunementLimit: 22),
+    GuardianSpirit(name: "Mizuchi",          element: .water,      type: .brute,   attunementLimit: 20),
+    GuardianSpirit(name: "Blue Dragon",      element: .lightning,  type: .phantom, attunementLimit: 24),
+    GuardianSpirit(name: "Suzaku",           element: .fire,       type: .phantom, attunementLimit: 24),
+    GuardianSpirit(name: "Kurama Tengu",     element: .purity,     type: .feral,   attunementLimit: 22),
+    GuardianSpirit(name: "Sohaya",           element: .purity,     type: .feral,   attunementLimit: 26),
+    GuardianSpirit(name: "Amiabe",           element: .purity,     type: .phantom, attunementLimit: 23),
+    GuardianSpirit(name: "Ho",               element: .purity,     type: .brute,   attunementLimit: 25),
+    GuardianSpirit(name: "Oh",               element: .purity,     type: .feral,   attunementLimit: 25),
+    GuardianSpirit(name: "Ho-oh",            element: .purity,     type: .phantom, attunementLimit: 26),
+    GuardianSpirit(name: "Janomecho",        element: .corruption, type: .feral,   attunementLimit: 22),
+    GuardianSpirit(name: "Kuzunoha the Fox", element: .corruption, type: .phantom, attunementLimit: 24),
+    GuardianSpirit(name: "Baku",             element: .corruption, type: .brute,   attunementLimit: 26),
+  ]
+
+}
+
+extension Nioh2 {
+
   static let weapons: [Weapon] = [
     Weapon(type: "Sword", variants: ["Uchigatana","Tachi"]),
     Weapon(type: "Dual Swords"),

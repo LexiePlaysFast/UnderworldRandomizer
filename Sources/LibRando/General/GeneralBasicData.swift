@@ -1,4 +1,4 @@
-class Weapon: Codable, Equatable {
+struct Weapon: Codable, Equatable {
 
   let type: String
   let variants: [String]?

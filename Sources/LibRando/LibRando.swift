@@ -54,7 +54,6 @@ enum Nioh2: Game {
     "Depths Randomizer": DepthsRandomizer()
   ]
 
-  static let soulCores:        [SoulCore]        = loadFile("Soul Cores")!
   static let guardianSpirits:  [GuardianSpirit]  = loadFile("Guardian Spirits")!
 
   static let bosses:           [Boss]            = loadFile("Bosses")!

@@ -26,7 +26,7 @@ extension Nioh2 {
     }
   }
 
-  class SoulCore: Codable, Equatable {
+  struct SoulCore: Codable, Equatable {
     let name: String
     let type: Nioh2.SpiritType
     let attunementCost: Int

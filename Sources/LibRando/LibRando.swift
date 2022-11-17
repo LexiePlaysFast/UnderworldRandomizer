@@ -54,9 +54,6 @@ enum Nioh2: Game {
     "Depths Randomizer": DepthsRandomizer()
   ]
 
-  static let bosses:           [Boss]            = loadFile("Bosses")!
-  static let floorLayouts:     [FloorLayout]     = loadFile("Floor Layouts")!
-
   static let underworldFloors: [UnderworldFloor] = loadUnderworld(bosses: bosses, floorLayouts: floorLayouts)
 
 }

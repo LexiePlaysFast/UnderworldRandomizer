@@ -18,7 +18,7 @@ extension Nioh2 {
 
 extension Nioh2 {
 
-  class Boss: Codable, Equatable {
+  struct Boss: Codable, Equatable {
     let name: String
 
     static func == (lhs: Nioh2.Boss, rhs: Nioh2.Boss) -> Bool {
@@ -36,7 +36,7 @@ extension Nioh2 {
     }
   }
 
-  class FloorLayout: Codable, Equatable {
+  struct FloorLayout: Codable, Equatable {
     let name: String
     let scampuss: Int?
     let smallSudama: Int?

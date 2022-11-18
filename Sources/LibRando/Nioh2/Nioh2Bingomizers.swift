@@ -14,6 +14,9 @@ extension Nioh2 {
       pool += guardianSpirits
         .map { GuardianSpiritBingoSquare(guardianSpirit: $0) }
 
+      pool += (1...100)
+        .map { _ in SoulCoreTripletBingoSquare(from: soulCores) }
+
       return pool
     }()
 

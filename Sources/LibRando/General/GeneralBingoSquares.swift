@@ -7,7 +7,7 @@ struct WeaponBingoSquare: BingoCardSquare {
   }
 
   var description: String {
-    "Defeat a boss using the weapon: \(weapon.name)"
+    "Defeat a boss using the weapon type \(weapon.name)."
   }
 
 }

@@ -85,4 +85,11 @@ final class BingoTests: XCTestCase {
     XCTAssertEqual(card.index(for: "O5"), 24)
   }
 
+  func testNamedAccess() {
+    XCTAssertNil   (card.square(named: "B0"))
+    XCTAssertNotNil(card.square(named: "B1"))
+
+    XCTAssertEqual(card.square(named: "I2")?.summary, "7")
+  }
+
 }

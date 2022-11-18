@@ -15,6 +15,16 @@ public struct BingoCard {
     self.squares = squares
   }
 
+  public func square(named square: String) -> BingoCardSquare? {
+    guard
+      let index = index(for: square)
+    else {
+      return nil
+    }
+
+    return squares[index]
+  }
+
   @discardableResult
   public mutating func mark(square: String) -> Bool {
     guard

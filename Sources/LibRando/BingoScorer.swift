@@ -39,6 +39,8 @@ public class BingoScorer {
     case incomplete
   }
 
+  public static var defaultScorer: BingoScorer = { BingoScorer() }()
+
   public func score(_ card: BingoCard, using rule: Rule) -> Score {
     switch rule {
     case .lines(let clearCount):

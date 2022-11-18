@@ -11,3 +11,10 @@ struct WeaponBingoSquare: BingoCardSquare {
   }
 
 }
+
+struct ChallengeBingoSquare: BingoCardSquare {
+
+  let summary: String
+  let description: String
+
+}

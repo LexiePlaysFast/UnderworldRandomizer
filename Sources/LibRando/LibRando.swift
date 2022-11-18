@@ -17,6 +17,7 @@ public protocol Game {
   static var name: String { get }
 
   static var randomizers: [String: Randomizer] { get }
+  static var bingomizers: [String: Bingomizer] { get }
 
 }
 
@@ -25,6 +26,7 @@ enum Nioh: Game {
   static let name: String = "Nioh"
 
   static let randomizers: [String: Randomizer] = [:]
+  static let bingomizers: [String: Bingomizer] = [:]
 
 }
 
@@ -33,7 +35,11 @@ enum Nioh2: Game {
   static let name: String = "Nioh 2"
 
   static let randomizers: [String: Randomizer] = [
-    "Depths Randomizer": DepthsRandomizer()
+    "Depths Randomizer": DepthsRandomizer(),
+  ]
+
+  static let bingomizers: [String: Bingomizer] = [
+    "NG+": NewGamePlusBingomizer(),
   ]
 
 }

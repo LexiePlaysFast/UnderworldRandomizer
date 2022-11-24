@@ -33,5 +33,16 @@ let package = Package(
         "LibRando",
       ]
     ),
+    .target(
+      name: "LibSeeded",
+      dependencies: [
+      ]
+    ),
+    .testTarget(
+      name: "SeededTests",
+      dependencies: [
+        "LibSeeded",
+      ]
+    ),
   ]
 )

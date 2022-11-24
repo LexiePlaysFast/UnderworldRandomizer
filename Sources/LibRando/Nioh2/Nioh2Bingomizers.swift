@@ -2,6 +2,10 @@ extension Nioh2 {
 
   class NewGameBingomizer: Bingomizer {
 
+    lazy var centreSpace: BingoCardSquare? = {
+      ChallengeBingoSquare(summary: "Beat the Game!", description: "Beat A Distant Dream, killing Nightmare Bringer and beating the game!")
+    }()
+
     lazy var staticPool: [BingoCardSquare] = {
       var pool: [BingoCardSquare] = []
 

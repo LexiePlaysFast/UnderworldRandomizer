@@ -213,7 +213,7 @@ extension Nioh2 {
     FloorLayout(name: "Yashima",                                    scampuss: 0, smallSudama: 0, largeSudama: 0, darkRealms: 0, majorEnemies: 6, bigChests: 4, hotSprings: 0),
   ]
 
-  static let underworldFloors: [UnderworldFloor] = loadUnderworld(floors: [
+  static let underworldFloors: [UnderworldFloor] = loadUnderworld([
     (layout: "Kurama",                                     boss: "Mezuki"),
     (layout: "Spirit Stone Mine",                          boss: "Honda Tadakatsu"),
     (layout: "Komaki-Nagakute (Two Faces of Hospitality)", boss: "Tatarimokke"),
@@ -324,7 +324,7 @@ extension Nioh2 {
     (layout: "Daigo Temple",                               boss: "Nightmare Bringer"),
   ], bosses: bosses, floorLayouts: floorLayouts)
 
-  static fileprivate func loadUnderworld(floors: [(layout: String, boss: String)], bosses: [Boss], floorLayouts: [FloorLayout]) -> [UnderworldFloor] {
+  static fileprivate func loadUnderworld(_ floors: [(layout: String, boss: String)], bosses: [Boss], floorLayouts: [FloorLayout]) -> [UnderworldFloor] {
     let floorLayouts: [String: FloorLayout] = floorLayouts
       .reduce(into: [:]) { dict, floorLayout in
         dict[floorLayout.name] = floorLayout
@@ -375,5 +375,117 @@ extension Nioh2 {
     Region(name: "Darkness in the Capital", startYear:  976, endYear:  nil, isDLC:  true),
     Region(name: "The First Samurai",       startYear:  797, endYear:  nil, isDLC:  true),
   ]
+
+  static let missions: [Mission] = loadMissions([
+    (region: "Awakening", name: "The Village of Cursed Blossoms", type: .main),
+    (region: "Awakening", name: "The Beast Born of Smoke and Flames", type: .main),
+    (region: "Awakening", name: "The Viper's Sanctum", type: .main),
+
+    (region: "Awakening", name: "A Voice in the Twilight", type: .sub),
+    (region: "Awakening", name: "The Search", type: .sub),
+    (region: "Awakening", name: "A Favour for the Blacksmith", type: .sub),
+    (region: "Awakening", name: "Dark Omens", type: .sub),
+    (region: "Awakening", name: "The Greedy Hunter", type: .sub),
+    (region: "Awakening", name: "The Forest Veiled in Darkness", type: .sub),
+
+    (region: "Soaring",   name: "The Hidden Monsters of Okehazama", type: .main),
+    (region: "Soaring",   name: "The Mysterious One Night Castle", type: .main),
+    (region: "Soaring",   name: "The Hollow Fortress", type: .main),
+
+    (region: "Soaring",   name: "An End to Seclusion", type: .sub),
+    (region: "Soaring",   name: "The Sunomata Yokai Hunt", type: .sub),
+    (region: "Soaring",   name: "The Shiftling's Wise Judgement", type: .sub),
+    (region: "Soaring",   name: "Hidetatsu's Dying Wish", type: .sub),
+    (region: "Soaring",   name: "The Viper and the Butterfly", type: .sub),
+    (region: "Soaring",   name: "An Error in Calculation", type: .sub),
+    (region: "Soaring",   name: "The Fire God's Magatama", type: .sub),
+    (region: "Soaring",   name: "Imagawa Diehard", type: .sub),
+    (region: "Soaring",   name: "A Hot-blooded Howl", type: .sub),
+
+    (region: "Shadow", name: "A Way Out", type: .main),
+    (region: "Shadow", name: "Corpses and Ice", type: .main),
+    (region: "Shadow", name: "Bird In A Cage", type: .main),
+
+    (region: "Shadow", name: "The Demon King's Blade", type: .sub),
+    (region: "Shadow", name: "The Golden Nation", type: .sub),
+    (region: "Shadow", name: "Immovable", type: .sub),
+    (region: "Shadow", name: "The Brothers' Blades", type: .sub),
+    (region: "Shadow", name: "A Shadow's Duty", type: .sub),
+    (region: "Shadow", name: "Learning a Lesson", type: .sub),
+    (region: "Shadow", name: "Horns on Head, Dragonfly in Hand", type: .sub),
+    (region: "Shadow", name: "Lingering Snow and Crimson Tracks", type: .sub),
+    (region: "Shadow", name: "The Shrine of Oaths", type: .sub),
+    (region: "Shadow", name: "A Formal Match", type: .sub),
+    (region: "Shadow", name: "The Tiger Approaches", type: .sub),
+    (region: "Shadow", name: "The Point of No Return", type: .sub),
+    (region: "Shadow", name: "The Fallen Star", type: .sub),
+
+    (region: "Shadow", name: "A Strong Bond", type: .online),
+    (region: "Shadow", name: "The Chinese Bellflower Dagger", type: .online),
+    (region: "Shadow", name: "The Child Prodigy's Invitation", type: .online),
+
+    (region: "Dawn", name: "Pervading Waters", type: .main),
+    (region: "Dawn", name: "The Frenzied Blaze", type: .main),
+    (region: "Dawn", name: "The Sun Sets On Mount Tenno", type: .main),
+
+    (region: "Dawn", name: "The Aberrant Mage", type: .sub),
+    (region: "Dawn", name: "The Refined Man of the Underworld", type: .sub),
+    (region: "Dawn", name: "Abduction", type: .sub),
+    (region: "Dawn", name: "The Warrior", type: .sub),
+    (region: "Dawn", name: "Master of the Three Evils", type: .sub),
+    (region: "Dawn", name: "Song of the Yokai", type: .sub),
+    (region: "Dawn", name: "The Third Word", type: .sub),
+    (region: "Dawn", name: "The Burning Sky", type: .sub),
+    (region: "Dawn", name: "The Missing Gun", type: .sub),
+
+    (region: "Twilight", name: "Ruin Draws Near", type: .main),
+    (region: "Twilight", name: "The Two Faces of Hospitality", type: .main),
+    (region: "Twilight", name: "The High-spirited Demon", type: .main),
+
+    (region: "Twilight", name: "Stray Cats", type: .sub),
+    (region: "Twilight", name: "A Message from the Deceased", type: .sub),
+    (region: "Twilight", name: "A Prayer in the Moonlight", type: .sub),
+    (region: "Twilight", name: "Scattered Fragments", type: .sub),
+    (region: "Twilight", name: "Calling on the Fire God", type: .sub),
+    (region: "Twilight", name: "Okuni's Search", type: .sub),
+
+    (region: "Twilight", name: "Farewell to the Past", type: .online),
+
+    (region: "Dream", name: "The Mausoleum of Evil", type: .main),
+    (region: "Dream", name: "The Golden Castle", type: .main),
+    (region: "Dream", name: "Cherry Blossom Viewing in Daigo", type: .main),
+
+    (region: "Dream", name: "The Bravest of the Brave", type: .sub),
+    (region: "Dream", name: "Restoring Harmony", type: .sub),
+    (region: "Dream", name: "The Dream's End", type: .sub),
+    (region: "Dream", name: "The Scented Letter", type: .sub),
+    (region: "Dream", name: "Restless Spirits", type: .sub),
+    (region: "Dream", name: "Yaksha Returns", type: .sub),
+    (region: "Dream", name: "The Roaming Artisan", type: .sub),
+    (region: "Dream", name: "Mataza of the Spear", type: .sub),
+    (region: "Dream", name: "Japanese Heart, Yokai Smarts", type: .sub),
+
+    (region: "Afterglow", name: "The Blue-eyed Samurai", type: .main),
+    (region: "Afterglow", name: "In the Eye of the Beholder", type: .main),
+
+    (region: "Afterglow", name: "Dawn of Hope", type: .sub),
+
+    (region: "Afterglow", name: "Calamity's Pulse", type: .online),
+    (region: "Afterglow", name: "Wave of Terror", type: .online),
+    (region: "Afterglow", name: "Winds of Ruin", type: .online),
+    (region: "Afterglow", name: "The Trustworthy", type: .online),
+  ], regions: regions)
+
+  static fileprivate func loadMissions(_ missions: [(region: String, name: String, type: Mission.`Type`)], regions: [Region]) -> [Mission] {
+    let regions: [String: Region] = regions
+      .reduce(into: [:]) { dict, region in
+        dict[region.name] = region
+      }
+
+    return missions
+      .map { missionData in
+        Mission(region: regions[missionData.region]!, name: missionData.name, type: missionData.type)
+      }
+  }
 
 }

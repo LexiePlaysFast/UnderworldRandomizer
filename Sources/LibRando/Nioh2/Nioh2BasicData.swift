@@ -85,4 +85,23 @@ extension Nioh2 {
 
   }
 
+  struct Mission {
+
+    enum `Type` {
+      case main
+      case sub
+      case online
+
+      case twilight
+      case scroll
+      case dojo
+    }
+
+    let region: Region
+
+    let name: String
+    let type: Type
+
+  }
+
 }

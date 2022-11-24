@@ -64,7 +64,7 @@ extension Nioh2 {
 
   class UnderworldFloor {
 
-    let floorNumber: Int?
+    let floorNumber: Int
     let floorLayout: FloorLayout
     let boss: Boss
 

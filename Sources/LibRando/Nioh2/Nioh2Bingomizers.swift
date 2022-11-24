@@ -38,12 +38,14 @@ extension Nioh2 {
         (summary: "No Limit", description: "Deal the killing blow to a boss with Limitless."),
         (summary: "I Get By", description: "Deal the killing blow to a boss with a guardian spirit ability (in Yokai Shift, using a Fleeting Guardian Amulet, or using a Guardian Spirit Talisman)."),
 
+        /*
         (summary: "Dear Mother", description: "Reach 5 stacks of Blood of the Yokai using Sarutahiko or Kurama Swordsmaster+ while fighting a boss before killing it."),
         (summary: "Pure Soul", description: "Reach 3 stacks of Cleaning Soul using Izanagi while fighting a boss before killing it."),
         (summary: "Versatile", description: "Reach 9 stacks of Versatility using Benzaiten or Susano while fighting a boss before killing it."),
         (summary: "Blocked!", description: "Reach 9 stacks of Rock Solid using Acala or Tranquil Foundations+ while fighting a boss before killing it."),
         (summary: "Revolutionary", description: "Reach 9 stacks of Death Dancer using Ame-no-Uzume while fighting a boss before killing it."),
         (summary: "Samsara", description: "Allow a proc of Living Dead using Izanami while fighting a boss before killing it."),
+        */
       ].map { ChallengeBingoSquare(summary: $0.summary, description: $0.description) }
 
       pool += weapons

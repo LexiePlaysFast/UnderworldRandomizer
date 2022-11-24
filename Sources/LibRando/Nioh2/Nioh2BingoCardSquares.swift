@@ -1,5 +1,19 @@
 extension Nioh2 {
 
+  struct MissionBingoSquare: BingoCardSquare {
+
+    let mission: Mission
+
+    var summary: String {
+      "Beat \(mission.name)"
+    }
+
+    var description: String {
+      "Beat \(mission.type) mission \"\(mission.name)\" in the region \(mission.region.name)."
+    }
+
+  }
+
   struct BossBingoSquare: BingoCardSquare {
 
     let boss: Boss

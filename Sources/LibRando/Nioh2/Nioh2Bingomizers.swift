@@ -1,6 +1,6 @@
 extension Nioh2 {
 
-  class NewGamePlusBingomizer: Bingomizer {
+  class NewGameBingomizer: Bingomizer {
 
     lazy var staticPool: [BingoCardSquare] = {
       var pool: [BingoCardSquare] = []
@@ -50,6 +50,10 @@ extension Nioh2 {
 
       pool += guardianSpirits
         .map { GuardianSpiritBingoSquare(guardianSpirit: $0) }
+
+      pool += missions
+        .filter { $0.type == .sub || $0.type == .online }
+        .map { MissionBingoSquare(mission: $0) }
 
       return pool
     }()

@@ -6,7 +6,7 @@ final class BingoTests: XCTestCase {
 
   func testBingoCard() {
     let state = UUID(uuidString: "4A062CFB-2408-4109-A1FA-C0052796EC1B")!
-    let bingomizer = LibRando.game(named: "Nioh 2")!.bingomizers["NG+"]!
+    let bingomizer = LibRando.game(named: "Nioh 2")!.bingomizers["NG"]!
 
     var generatorA = UUIDSeededRandomGenerator(state: state)
     var generatorB = UUIDSeededRandomGenerator(state: state)

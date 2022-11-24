@@ -39,7 +39,7 @@ enum Nioh2: Game {
   ]
 
   static let bingomizers: [String: Bingomizer] = [
-    "NG+": NewGamePlusBingomizer(),
+    "NG": NewGameBingomizer(),
   ]
 
 }

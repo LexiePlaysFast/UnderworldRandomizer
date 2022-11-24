@@ -92,8 +92,8 @@ final class BingoTests: XCTestCase {
     XCTAssertEqual(card.square(named: "I2")?.summary, "7")
   }
 
-  func testNGPlusBingo() {
-    XCTAssertNotNil(Nioh2.NewGamePlusBingomizer().makeCard())
+  func testNGBingo() {
+    XCTAssertNotNil(Nioh2.NewGameBingomizer().makeCard())
   }
 
 }

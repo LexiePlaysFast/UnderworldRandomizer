@@ -1,9 +1,13 @@
-class XorshiftRandomNumberGenerator: SeededRandomNumberGenerator {
+final class XorshiftRandomNumberGenerator: SeededRandomNumberGenerator {
 
   var state: UInt64
 
-  required init(seed: Int) {
-    self.state = UInt64(bitPattern: Int64(seed))
+  convenience init(seed: Int) {
+    self.init(seed: UInt64(bitPattern: Int64(seed)))
+  }
+
+  required init(seed: UInt64) {
+    self.state = seed
   }
 
   func next() -> UInt64 {

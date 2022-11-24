@@ -50,5 +50,12 @@ let package = Package(
         "LibSeeded",
       ]
     ),
+    .testTarget(
+      name: "IntegrationTests",
+      dependencies: [
+        "LibRando",
+        "LibSeeded",
+      ]
+    ),
   ]
 )

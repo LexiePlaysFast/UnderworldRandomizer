@@ -4,8 +4,11 @@ public protocol Bingomizer {
   var centreSpace: BingoCardSquare? { get }
 
   func makeCard() -> BingoCard?
+  func makeCard<T: RandomNumberGenerator>(using: inout T) -> BingoCard?
 
 }
+
+fileprivate var defaultRandomNumberGenerator = SystemRandomNumberGenerator()
 
 extension Bingomizer {
 
@@ -14,7 +17,11 @@ extension Bingomizer {
   }
 
   func makeCard() -> BingoCard? {
-    var squares = Array(pool.shuffled().prefix(25))
+    makeCard(using: &defaultRandomNumberGenerator)
+  }
+
+  func makeCard<T: RandomNumberGenerator>(using generator: inout T) -> BingoCard? {
+    var squares = Array(pool.shuffled(using: &generator).prefix(25))
 
     if let centreSpace = self.centreSpace {
       squares.insert(centreSpace, at: 12)

@@ -474,6 +474,45 @@ extension Nioh2 {
     (region: "Afterglow", name: "Wave of Terror", type: .online),
     (region: "Afterglow", name: "Winds of Ruin", type: .online),
     (region: "Afterglow", name: "The Trustworthy", type: .online),
+
+
+    (region: "The Tengu's Disciple", name: "A Song to Calm the Storm", type: .main),
+    (region: "The Tengu's Disciple", name: "Eternal Rivals", type: .main),
+
+    (region: "The Tengu's Disciple", name: "Shadows Creep in Kurama", type: .sub),
+    (region: "The Tengu's Disciple", name: "The Lost Sword", type: .sub),
+    (region: "The Tengu's Disciple", name: "The Tale of the Taira", type: .sub),
+    (region: "The Tengu's Disciple", name: "The Loyal Retainer", type: .sub),
+    (region: "The Tengu's Disciple", name: "Bond of the Blade", type: .sub),
+    (region: "The Tengu's Disciple", name: "An Encounter Among the Blossoms", type: .sub),
+    (region: "The Tengu's Disciple", name: "Prisoners of the Stones", type: .sub),
+    (region: "The Tengu's Disciple", name: "Soul of the Warrior Monk", type: .sub),
+
+    (region: "Darkness in the Capital", name: "Suzune in the Flames", type: .main),
+    (region: "Darkness in the Capital", name: "The Blighted Gate", type: .main),
+    (region: "Darkness in the Capital", name: "Palace of the Damned", type: .main),
+
+    (region: "Darkness in the Capital", name: "The Buddha's Palm", type: .sub),
+    (region: "Darkness in the Capital", name: "Insatiable Bloodlust", type: .sub),
+    (region: "Darkness in the Capital", name: "The Revelry Ends", type: .sub),
+    (region: "Darkness in the Capital", name: "Boundless Chaos", type: .sub),
+    (region: "Darkness in the Capital", name: "The Sweet Scent of Plums", type: .sub),
+    (region: "Darkness in the Capital", name: "The Demon Slayers", type: .sub),
+    (region: "Darkness in the Capital", name: "The Dragon Clan", type: .sub),
+    (region: "Darkness in the Capital", name: "A Storm in the Underworld", type: .sub),
+
+    (region: "The First Samurai", name: "Dawn of the Demon", type: .main),
+    (region: "The First Samurai", name: "A Distant Dream", type: .main),
+
+    (region: "The First Samurai", name: "In Search of the Elixir", type: .sub),
+    (region: "The First Samurai", name: "Battle at the Temple", type: .sub),
+    (region: "The First Samurai", name: "Undying Light", type: .sub),
+    (region: "The First Samurai", name: "The Alluring Ancient", type: .sub),
+    (region: "The First Samurai", name: "Words of Respite", type: .sub),
+    (region: "The First Samurai", name: "Rivals Return", type: .sub),
+    (region: "The First Samurai", name: "A Spirit's Return", type: .sub),
+    (region: "The First Samurai", name: "A Familiar Glow", type: .sub),
+    (region: "The First Samurai", name: "Against All Comers", type: .sub),
   ], regions: regions)
 
   static fileprivate func loadMissions(_ missions: [(region: String, name: String, type: Mission.`Type`)], regions: [Region]) -> [Mission] {

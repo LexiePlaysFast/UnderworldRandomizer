@@ -12,6 +12,12 @@ let package = Package(
         "LibRando"
       ]
     ),
+    .library(
+      name: "LibSeeded",
+      targets: [
+        "LibSeeded"
+      ]
+    ),
   ],
   dependencies: [
   ],

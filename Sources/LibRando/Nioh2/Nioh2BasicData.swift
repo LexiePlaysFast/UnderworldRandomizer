@@ -76,4 +76,13 @@ extension Nioh2 {
 
   }
 
+  struct Region {
+
+    let name: String
+    let startYear: Int?
+    let endYear: Int?
+    let isDLC: Bool
+
+  }
+
 }

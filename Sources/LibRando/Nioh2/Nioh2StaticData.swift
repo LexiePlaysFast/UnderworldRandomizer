@@ -359,3 +359,21 @@ extension Nioh2 {
   ]
 
 }
+
+extension Nioh2 {
+
+  static let regions: [Region] = [
+    Region(name: "Awakening",               startYear: 1555, endYear: 1556, isDLC: false),
+    Region(name: "Soaring",                 startYear: 1560, endYear: 1567, isDLC: false),
+    Region(name: "Shadow",                  startYear: 1570, endYear: 1573, isDLC: false),
+    Region(name: "Dawn",                    startYear: 1578, endYear: 1582, isDLC: false),
+    Region(name: "Twilight",                startYear: 1583, endYear: 1584, isDLC: false),
+    Region(name: "Dream",                   startYear: 1590, endYear: 1598, isDLC: false),
+    Region(name: "Afterglow",               startYear:  nil, endYear: 1616, isDLC: false),
+
+    Region(name: "The Tengu's Disciple",    startYear: 1185, endYear:  nil, isDLC:  true),
+    Region(name: "Darkness in the Capital", startYear:  976, endYear:  nil, isDLC:  true),
+    Region(name: "The First Samurai",       startYear:  797, endYear:  nil, isDLC:  true),
+  ]
+
+}

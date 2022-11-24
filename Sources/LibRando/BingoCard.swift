@@ -41,6 +41,19 @@ public struct BingoCard {
       .map(marked.contains)
   }
 
+  public mutating func mark(indices: IndexSet) -> Bool {
+    guard
+      indices.max() ?? 25 < 25,
+      indices.min() ?? -1 >= 0
+    else {
+      return false
+    }
+
+    marked.formUnion(indices)
+
+    return true
+  }
+
   mutating func mark(index: Int) -> Bool {
     guard
       isValid(index: index)

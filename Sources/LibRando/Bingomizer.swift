@@ -1,6 +1,7 @@
 public protocol Bingomizer {
 
   var pool: [BingoCardSquare] { get }
+  var centreSpace: BingoCardSquare? { get }
 
   func makeCard() -> BingoCard?
 
@@ -8,8 +9,19 @@ public protocol Bingomizer {
 
 extension Bingomizer {
 
+  var centreSpace: BingoCardSquare? {
+    nil
+  }
+
   func makeCard() -> BingoCard? {
-    BingoCard(squares: Array(pool.shuffled().prefix(25)))
+    var squares = Array(pool.shuffled().prefix(25))
+
+    if let centreSpace = self.centreSpace {
+      squares.insert(centreSpace, at: 12)
+      squares.removeLast()
+    }
+
+    return BingoCard(squares: squares)
   }
 
 }

@@ -41,6 +41,7 @@ public struct BingoCard {
       .map(marked.contains)
   }
 
+  @discardableResult
   public mutating func mark(indices: IndexSet) -> Bool {
     guard
       indices.max() ?? 25 < 25,

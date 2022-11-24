@@ -31,6 +31,7 @@ extension Nioh2 {
         (summary: "Kaboom!", description: "Deal the killing blow to a boss with any bomb (not including explosive cannon rounds)."),
         (summary: "Iai!", description: "Deal the killing blow to a boss with any sheathed ability (including Ultimate Sign of the Cross)."),
         (summary: "Swag Strats", description: "Deal the killing blow to a boss with Sword of Meditation."),
+        (summary: "No Limit", description: "Deal the killing blow to a boss with Limitless."),
         (summary: "I Get By", description: "Deal the killing blow to a boss with a guardian spirit ability (in Yokai Shift, using a Fleeting Guardian Amulet, or using a Guardian Spirit Talisman)."),
 
         (summary: "Dear Mother", description: "Reach 5 stacks of Blood of the Yokai using Sarutahiko or Kurama Swordsmaster+ while fighting a boss before killing it."),

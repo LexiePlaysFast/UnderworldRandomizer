@@ -3,6 +3,8 @@ public protocol Bingomizer {
   var pool: [BingoCardSquare] { get }
   var centreSpace: BingoCardSquare? { get }
 
+  func pool<T: RandomNumberGenerator>(using: inout T) -> [BingoCardSquare]
+
   func makeCard() -> BingoCard?
   func makeCard<T: RandomNumberGenerator>(using: inout T) -> BingoCard?
 
@@ -11,6 +13,10 @@ public protocol Bingomizer {
 fileprivate var defaultRandomNumberGenerator = SystemRandomNumberGenerator()
 
 extension Bingomizer {
+
+  var pool: [BingoCardSquare] {
+    pool(using: &defaultRandomNumberGenerator)
+  }
 
   var centreSpace: BingoCardSquare? {
     nil
@@ -21,7 +27,7 @@ extension Bingomizer {
   }
 
   func makeCard<T: RandomNumberGenerator>(using generator: inout T) -> BingoCard? {
-    var squares = Array(pool.shuffled(using: &generator).prefix(25))
+    var squares = Array(pool(using: &generator).shuffled(using: &generator).prefix(25))
 
     if let centreSpace = self.centreSpace {
       squares.insert(centreSpace, at: 12)

@@ -2,7 +2,7 @@ extension Nioh2 {
 
   class NewGamePlusBingomizer: Bingomizer {
 
-    lazy var pool: [BingoCardSquare] = {
+    lazy var staticPool: [BingoCardSquare] = {
       var pool: [BingoCardSquare] = []
 
       pool += [
@@ -51,11 +51,17 @@ extension Nioh2 {
       pool += guardianSpirits
         .map { GuardianSpiritBingoSquare(guardianSpirit: $0) }
 
-      pool += (1...100)
-        .map { _ in SoulCoreTripletBingoSquare(from: soulCores) }
-
       return pool
     }()
+
+    func pool<T: RandomNumberGenerator>(using generator: inout T) -> [BingoCardSquare] {
+      var pool = staticPool
+
+      pool += (1...100)
+        .map { _ in SoulCoreTripletBingoSquare(from: soulCores, using: &generator) }
+
+      return pool
+    }
 
   }
 

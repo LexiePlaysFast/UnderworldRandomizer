@@ -39,8 +39,8 @@ extension Nioh2 {
         precondition(soulCores.count == 3, "Incorrect number of soul cores, expected 3")
       }
 
-      static func draw(from cores: [SoulCore]) -> SoulCoreTriplet {
-        let cores = cores.shuffled()
+      static func draw<T: RandomNumberGenerator>(from cores: [SoulCore], using generator: inout T) -> SoulCoreTriplet {
+        let cores = cores.shuffled(using: &generator)
 
         let selection: [SoulCore] = [
           cores.first { $0.type == .feral },
@@ -65,8 +65,8 @@ extension Nioh2 {
 
     }
 
-    init(from selection: [SoulCore]) {
-      self.triplet = .draw(from: selection)
+    init<T: RandomNumberGenerator>(from selection: [SoulCore], using generator: inout T) {
+      self.triplet = .draw(from: selection, using: &generator)
     }
 
     let triplet: SoulCoreTriplet

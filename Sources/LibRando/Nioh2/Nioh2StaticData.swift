@@ -199,7 +199,7 @@ extension Nioh2 {
     FloorLayout(name: "Nanbanji",                                   scampuss: 1, smallSudama: 0, largeSudama: 0, darkRealms: 1, majorEnemies: 3, bigChests: 3, hotSprings: 0),
     FloorLayout(name: "Odani Castle",                               scampuss: 2, smallSudama: 0, largeSudama: 0, darkRealms: 1, majorEnemies: 6, bigChests: 3, hotSprings: 1),
     FloorLayout(name: "Okehazama",                                  scampuss: 3, smallSudama: 0, largeSudama: 3, darkRealms: 2, majorEnemies: 5, bigChests: 6, hotSprings: 0),
-    FloorLayout(name: "Oniga Castle",                   scampuss: nil, smallSudama: nil, largeSudama: nil, darkRealms: nil, majorEnemies: nil, bigChests: nil, hotSprings: nil),
+    FloorLayout(name: "Oniga Castle",                               scampuss: 0, smallSudama: 0, largeSudama: 1, darkRealms: 2, majorEnemies: 5, bigChests: 3, hotSprings: 0),
     FloorLayout(name: "Pagoda",                         scampuss: nil, smallSudama: nil, largeSudama: nil, darkRealms: nil, majorEnemies: nil, bigChests: nil, hotSprings: nil),
     FloorLayout(name: "Rashomon",                                   scampuss: 1, smallSudama: 0, largeSudama: 1, darkRealms: 1, majorEnemies: 8, bigChests: 4, hotSprings: 0),
     FloorLayout(name: "Shigisan Castle",                            scampuss: 2, smallSudama: 0, largeSudama: 2, darkRealms: 3, majorEnemies: 4, bigChests: 3, hotSprings: 0),

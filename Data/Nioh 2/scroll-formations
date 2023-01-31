@@ -6,6 +6,7 @@ Burial Temple,evening,nioh,damned,Kukai,Akechi Mitsuhide,Li Naotora
 Burial Temple,night,strong,damned,Red Kappa,Saika Clan,
 Burial Temple,night,nioh,damned,Hachisuka Koroku,Rokurokubi,Oni-bi
 Burial Temple,night,nioh,damned,Gozuki,Namahage,The Sohaya
+Burial Temple,night,wise,damned,Azai Nagamasa,Flying Bolt,Onmyo Mage
 Byodo-in,,strong,damned,Kashin Koji,Otakemaru,
 Byodo-in,,demon,damned,Shuten Doji,One-eyed Oni,Oni-bi
 Byodo-in,,wise,damned,Enenra,Red Kappa,The Sohaya
@@ -54,6 +55,7 @@ Jusanzakura,night,nioh,damned,Ippon-Datara,Lesser Umi-bozu,
 Kanegasaki,,strong,damned,Tatarimokke,Rokurokubi,Aberrant Soldier
 Kanegasaki,,strong,damned,Tatarimokke,Snowclops,Ninken
 Kanegasaki,,nioh,damned,Saito Yoshitatsu,Wheelmonk,Ninja
+Kanegasaki,,demon,nioh,Saito Yoshitatsu,Tokichiro (Dream),
 Komaki-Nagakute (The High-Spirited Demon),,strong,damned,Daidara Bocchi,,
 Komaki-Nagakute (Two Faces of Hospitality),,nioh,damned,Tokichiro (Twilight),Mori Nagayoshi,Ikeda Tsuneoki
 Kurama,waterfall,demon,damned,Benkei,Bakegani,Aberrant Soldier
@@ -79,6 +81,7 @@ Pagoda,,nioh,damned,Tate Eboshi,Suiki,Konaki-Jiji
 Rashomon,pit,nioh,damned,Tsuchigumo,Lightning Gods of Yomi,
 Rashomon,pit,wise,damned,Tsuchigumo,Oboroguruma,Oni-bi
 Rashomon,pit,nioh,damned,Tsuchigumo,Yasha,Spider
+Rashomon,pit,damned,damned,Ren Hayabusa,Tsuchigumo,
 Rashomon,arena,nioh,damned,Giant Toad,Yoki,Ninja
 Spirit Stone Mine,day,demon,damned,Taira no Kagekiyo,Nuppeppo,Warrior
 Spirit Stone Mine,night,wise,damned,Benkei,Nuppeppo,Gaki
@@ -95,7 +98,7 @@ Suzuka Pass,,nioh,damned,Otakemaru (The First Samurai),Itsumade,Konaki-Jiji
 The Viper's Sanctum,day,strong,damned,Otakemaru,Red Kappa,Skeleton Warrior
 The Viper's Sanctum,day,wise,damned,Yatsu-no-Kami,Yamanba,One-eyed imp
 The Viper's Sanctum,night,wise,damned,Shuten Doji,Spider,Dweller
-The Viper's Sanctum,night,nioh,damned,Waira,Toxic Slime,
+The Viper's Sanctum,night,demon,damned,Waira,Toxic Slime,
 Todai-ji Temple,,wise,damned,Giant Toad,Yasha,Oni-bi
 Todai-ji Temple,,nioh,damned,Hellish Hag,Lesser Umi-bozu,
 Yashima,night,demon,damned,Nue,Bakegani,Lesser Umi-bozu

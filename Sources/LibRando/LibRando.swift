@@ -43,3 +43,12 @@ enum Nioh2: Game {
   ]
 
 }
+
+public func Nioh2UnderworldFloorInformation(floorNumber: Int) -> (layout: String, boss: String)? {
+  Nioh2
+    .underworldFloors
+    .first { $0.floorNumber == floorNumber }
+    .map { floorData in
+      (layout: floorData.floorLayout.name, boss: floorData.boss.name)
+    }
+}
